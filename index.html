@@ -27,11 +27,10 @@
 
     header p {
       font-size: 18px;
-      margin: 0;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
       background: white;
@@ -42,22 +41,40 @@
     section h2 {
       text-align: center;
       color: #0072ff;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    li {
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-      font-size: 18px;
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 260px;
+      transition: all 0.3s ease;
+      text-align: center;
     }
 
-    li:last-child {
-      border-bottom: none;
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 114, 255, 0.2);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin: 0;
+      color: #333;
     }
 
     #contact p, #contact a {
@@ -93,25 +110,38 @@
 
   <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li>Wedding Card Printing</li>
-      <li>Xerox (Black & White / Color)</li>
-      <li>Banner Printing</li>
-      <li>Lamination</li>
-      <li>Visiting Card Design & Print</li>
-      <li>Spiral Binding</li>
-      <li>Flex Printing</li>
-      <li>Offset Printing</li>
-      <li>Digital Printing</li>
-      <li>Screen Printing</li>
-      <li>Bill Book Printing</li>
-      <li>Letter Pad Printing</li>
-      <li>Color Printing (School & College Related Works)</li>
-    </ul>
+    <div class="card-container">
+      <div class="card"><div class="icon">💌</div><p>Wedding Card Printing</p></div>
+      <div class="card"><div class="icon">🖨️</div><p>Xerox (B/W / Color)</p></div>
+      <div class="card"><div class="icon">📢</div><p>Banner Printing</p></div>
+      <div class="card"><div class="icon">🎞️</div><p>Lamination</p></div>
+      <div class="card"><div class="icon">💼</div><p>Visiting Card Design</p></div>
+      <div class="card"><div class="icon">📚</div><p>Spiral Binding</p></div>
+      <div class="card"><div class="icon">🖼️</div><p>Flex Printing</p></div>
+      <div class="card"><div class="icon">🖋️</div><p>Offset Printing</p></div>
+      <div class="card"><div class="icon">💻</div><p>Digital Printing</p></div>
+      <div class="card"><div class="icon">🎨</div><p>Screen Printing</p></div>
+      <div class="card"><div class="icon">📒</div><p>Bill Book Printing</p></div>
+      <div class="card"><div class="icon">📄</div><p>Letter Pad Printing</p></div>
+      <div class="card"><div class="icon">🏫</div><p>School/College Color Print</p></div>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>📍 Address:</strong> Near SBI Bank, Belauha Bazar, Siddhart Nagar</p>
     <p><strong>📞 Phone:</strong> <a href="tel:+05545297255">05545297255</a></p>
-    <p><strong
+    <p><strong>📱 WhatsApp:</strong> 
+      <a href="https://wa.me/9838644687">9838644687</a> | 
+      <a href="https://wa.me/9935644687">9935644687</a>
+    </p>
+    <p><strong>📌 Location:</strong> 
+      <a href="https://maps.app.goo.gl/t2cUAmNtxr4mGBee8" target="_blank">View on Google Maps</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Farhan Enterprises. All rights reserved.
+  </footer>
+</body>
+</html>
