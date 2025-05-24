@@ -1,155 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farhan Printing Press</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan Printing Press</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
-    body {
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
+        body {
+            background-color: #f4f6f8;
+        }
 
-    header {
-      background: #0d1b2a;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
+        header {
+            background-color: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-    }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #1b263b;
-      padding: 10px 0;
-    }
+        header p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+        nav {
+            background-color: #1b263b;
+            padding: 1rem;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1581090700227-1e8b94a62b9c') no-repeat center center/cover;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-    .hero h2 {
-      font-size: 3rem;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .services {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-    .services h2 {
-      text-align: center;
-      color: #0d1b2a;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
 
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+        .services {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 30px 20px;
-      text-align: center;
-      width: 250px;
-      transition: transform 0.3s ease;
-    }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
 
-    .card:hover {
-      transform: translateY(-10px);
-    }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
 
-    .card i {
-      font-size: 2rem;
-      color: #1b263b;
-      margin-bottom: 10px;
-    }
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
 
-    footer {
-      background: #0d1b2a;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #0d1b2a;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact {
+            padding: 3rem 1rem;
+            background-color: #1b263b;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact a {
+            color: #f4f6f8;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-options {
+            margin-top: 1rem;
+        }
+
+        .modal-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-option label {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .modal-option select {
+            padding: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            width: 60%;
+        }
+
+        .upload-section {
+            margin-top: 1rem;
+        }
+
+        .upload-section label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-section input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .upload-section p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 1rem auto 0;
+            padding: 0.75rem 1.5rem;
+            background-color: #0d1b2a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1b263b;
+        }
+
+        .confirmation-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e6f4ea;
+            border: 1px solid #34c759;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #2e7d32;
+            text-align: center;
+        }
+
+        .modal-price {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .service-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Farhan Printing Press</h1>
-    <p>Printing & Stationery Services - Siddharth Nagar</p>
-  </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <h2>Your One-Stop Print Solution</h2>
-  </div>
-
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card"><i class="fas fa-scroll"></i><p>Wedding Card Printing</p></div>
-      <div class="card"><i class="fas fa-id-card"></i><p>Visiting Card</p></div>
-      <div class="card"><i class="fas fa-image"></i><p>Flex Printing</p></div>
-      <div class="card"><i class="fas fa-print"></i><p>Digital Printing</p></div>
-      <div class="card"><i class="fas fa-book"></i><p>Bill Book Printing</p></div>
-      <div class="card"><i class="fas fa-sticky-note"></i><p>Letter Pad Printing</p></div>
+    <header>
+        <h1>Farhan Printing Press</h1>
+        <p>Printing & Stationery Services - Siddharth Nagar</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="hero">
+        <h2>Your One-Stop Print Solution</h2>
+    </section>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card" onclick="openModal('wedding')">
+                <i class="fas fa-ring"></i>
+                <h3>Wedding Card Printing</h3>
+                <p>Elegant and customizable wedding cards.</p>
+            </div>
+            <div class="service-card" onclick="openModal('visiting')">
+                <i class="fas fa-address-card"></i>
+                <h3>Visiting Card</h3>
+                <p>Professional visiting cards for lasting impressions.</p>
+            </div>
+            <div class="service-card" onclick="openModal('flex')">
+                <i class="fas fa-sign"></i>
+                <h3>Flex Printing</h3>
+                <p>Large format flex printing for banners.</p>
+            </div>
+            <div class="service-card" onclick="openModal('digital')">
+                <i class="fas fa-print"></i>
+                <h3>Digital Printing</h3>
+                <p>Fast and cost-effective digital printing.</p>
+            </div>
+            <div class="service-card" onclick="openModal('bill')">
+                <i class="fas fa-file-invoice"></i>
+                <h3>Bill Book Printing</h3>
+                <p>Customized bill books for your business.</p>
+            </div>
+            <div class="service-card" onclick="openModal('letter')">
+                <i class="fas fa-file-alt"></i>
+                <h3>Letter Pad Printing</h3>
+                <p>Personalized letter pads with your logo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p><a href="https://maps.google.com" target="_blank">📍 Near SBI Bank, Belauha Bazar, Siddharth Nagar</a></p>
+        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><a href="https://wa.me/919876543210">WhatsApp Us</a></p>
+    </section>
+    <footer>
+        <p>© 2025 Farhan Printing Press. All rights reserved.</p>
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-description"></div>
+        </div>
     </div>
-  </section>
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
 
-  <section class="services" id="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align:center;">📍 Near SBI Bank, Belauha Bazar, Siddharth Nagar</p>
-    <p style="text-align:center;">📞 <a href="tel:+05545297255">05545297255</a></p>
-    <p style="text-align:center;">📱 <a href="https://wa.me/9838644687">9838644687</a> | <a href="https://wa.me/9935644687">9935644687</a></p>
-    <p style="text-align:center;">📌 <a href="https://maps.app.goo.gl/t2cUAmNtxr4mGBee8" target="_blank">View on Google Maps</a></p>
-  </section>
+        const services = {
+            wedding: {
+                title: 'Wedding Card Printing',
+                description: `
+                    <p>Design your perfect wedding card with Farhan Printing Press. Please provide the following details to help us create a card that matches your vision:</p>
+                    <ul>
+                        <li><strong>Size:</strong> Standard (5 x 7 inches) or custom dimensions</li>
+                        <li><strong>Minimum Order:</strong> 50 units</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="paper-quality-wedding">Paper Quality</label>
+                            <select id="paper-quality-wedding">
+                                <option value="matte">300 GSM Matte</option>
+                                <option value="glossy">300 GSM Glossy</option>
+                                <option value="textured">Premium Textured Paper</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="design-style-wedding">Design Style</label>
+                            <select id="design-style-wedding">
+                                <option value="traditional">Traditional</option>
+                                <option value="modern">Modern</option>
+                                <option value="minimalist">Minimalist</option>
+                                <option value="custom">Custom Design</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="finishing-wedding">Finishing</label>
+                            <select id="finishing-wedding">
+                                <option value="none">No Finish</option>
+                                <option value="embossing">Embossing</option>
+                                <option value="foil">Foil Stamping</option>
+                                <option value="uv">UV Coating</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-wedding">Orientation</label>
+                            <select id="orientation-wedding">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-wedding">Quantity</label>
+                            <select id="quantity-wedding">
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-wedding">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-wedding" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-wedding">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('wedding')">Submit Request</button>
+                    <div id="confirmation-message-wedding" style="display: none;"></div>
+                `
+            },
+            visiting: {
+                title: 'Visiting Card',
+                description: `
+                    <p>Make a lasting impression with our Standard Visiting Cards, designed to communicate your professional identity effectively.</p>
+                    <ul>
+                        <li><strong>Size:</strong> 3.5 x 2 inches</li>
+                        <li><strong>Minimum Order:</strong> 100 units</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="paper-quality-visiting">Paper Quality</label>
+                            <select id="paper-quality-visiting">
+                                <option value="matte">300 GSM Matte</option>
+                                <option value="glossy">300 GSM Glossy</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="finishing-visiting">Lamination</label>
+                            <select id="finishing-visiting">
+                                <option value="none">No Finish</option>
+                                <option value="matte">Matte Lamination</option>
+                                <option value="glossy">Glossy Lamination</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-visiting">Orientation</label>
+                            <select id="orientation-visiting">
+                                <option value="landscape">Landscape</option>
+                                <option value="portrait">Portrait</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="printing-location-visiting">Printing Location</label>
+                            <select id="printing-location-visiting">
+                                <option value="front">Front</option>
+                                <option value="both">Both Sides</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-visiting">Quantity</label>
+                            <select id="quantity-visiting">
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-visiting">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-visiting" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-visiting">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('visiting')">Submit Request</button>
+                    <div id="confirmation-message-visiting" style="display: none;"></div>
+                `
+            },
+            flex: {
+                title: 'Flex Printing',
+                description: `
+                    <p>Create impactful banners and hoardings with our Flex Printing services, perfect for large-format displays.</p>
+                    <ul>
+                        <li><strong>Size:</strong> Custom dimensions (specify in your request)</li>
+                        <li><strong>Minimum Order:</strong> 1 unit</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="material-flex">Material</label>
+                            <select id="material-flex">
+                                <option value="standard">Standard Vinyl</option>
+                                <option value="premium">Premium Vinyl</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="finishing-flex">Finishing</label>
+                            <select id="finishing-flex">
+                                <option value="none">No Finish</option>
+                                <option value="matte">Matte Lamination</option>
+                                <option value="glossy">Glossy Lamination</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-flex">Orientation</label>
+                            <select id="orientation-flex">
+                                <option value="landscape">Landscape</option>
+                                <option value="portrait">Portrait</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-flex">Quantity</label>
+                            <select id="quantity-flex">
+                                <option value="1">1</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-flex">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-flex" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-flex">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('flex')">Submit Request</button>
+                    <div id="confirmation-message-flex" style="display: none;"></div>
+                `
+            },
+            digital: {
+                title: 'Digital Printing',
+                description: `
+                    <p>Fast and cost-effective Digital Printing services for a variety of needs, from flyers to brochures.</p>
+                    <ul>
+                        <li><strong>Size:</strong> A4, A5, or custom dimensions</li>
+                        <li><strong>Minimum Order:</strong> 10 units</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="paper-quality-digital">Paper Quality</label>
+                            <select id="paper-quality-digital">
+                                <option value="matte">80 GSM Matte</option>
+                                <option value="glossy">100 GSM Glossy</option>
+                                <option value="premium">Premium 120 GSM</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="finishing-digital">Finishing</label>
+                            <select id="finishing-digital">
+                                <option value="none">No Finish</option>
+                                <option value="matte">Matte Lamination</option>
+                                <option value="glossy">Glossy Lamination</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-digital">Orientation</label>
+                            <select id="orientation-digital">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="printing-location-digital">Printing Location</label>
+                            <select id="printing-location-digital">
+                                <option value="front">Front</option>
+                                <option value="both">Both Sides</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-digital">Quantity</label>
+                            <select id="quantity-digital">
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-digital">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-digital" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-digital">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('digital')">Submit Request</button>
+                    <div id="confirmation-message-digital" style="display: none;"></div>
+                `
+            },
+            bill: {
+                title: 'Bill Book Printing',
+                description: `
+                    <p>Customized bill books designed for your business, ensuring a professional look for invoices.</p>
+                    <ul>
+                        <li><strong>Size:</strong> A5 or custom dimensions</li>
+                        <li><strong>Minimum Order:</strong> 5 books (50 sheets per book)</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="paper-quality-bill">Paper Quality</label>
+                            <select id="paper-quality-bill">
+                                <option value="standard">70 GSM Standard</option>
+                                <option value="premium">80 GSM Premium</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="binding-bill">Binding</label>
+                            <select id="binding-bill">
+                                <option value="gum">Gum Binding</option>
+                                <option value="staple">Staple Binding</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-bill">Orientation</label>
+                            <select id="orientation-bill">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-bill">Quantity (Books)</label>
+                            <select id="quantity-bill">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-bill">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-bill" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-bill">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('bill')">Submit Request</button>
+                    <div id="confirmation-message-bill" style="display: none;"></div>
+                `
+            },
+            letter: {
+                title: 'Letter Pad Printing',
+                description: `
+                    <p>Personalized letter pads with your company logo and details, ideal for official correspondence.</p>
+                    <ul>
+                        <li><strong>Size:</strong> A4 or custom dimensions</li>
+                        <li><strong>Minimum Order:</strong> 100 sheets</li>
+                    </ul>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
+                    <div class="modal-options">
+                        <div class="modal-option">
+                            <label for="paper-quality-letter">Paper Quality</label>
+                            <select id="paper-quality-letter">
+                                <option value="standard">80 GSM Standard</option>
+                                <option value="premium">100 GSM Premium</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="orientation-letter">Orientation</label>
+                            <select id="orientation-letter">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="printing-location-letter">Printing Location</label>
+                            <select id="printing-location-letter">
+                                <option value="header">Header Only</option>
+                                <option value="header-footer">Header and Footer</option>
+                            </select>
+                        </div>
+                        <div class="modal-option">
+                            <label for="quantity-letter">Quantity (Sheets)</label>
+                            <select id="quantity-letter">
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <label for="design-upload-letter">Upload Your Design (Optional)</label>
+                        <input type="file" id="design-upload-letter" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-letter">No file selected</p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('letter')">Submit Request</button>
+                    <div id="confirmation-message-letter" style="display: none;"></div>
+                `
+            }
+        };
 
-  <footer>
-    &copy; 2025 Farhan Enterprises. All rights reserved.
-  </footer>
+        function openModal(service) {
+            modalTitle.textContent = services[service].title;
+            modalDescription.innerHTML = services[service].description;
+            modal.style.display = 'flex';
+
+            // Add event listener for file upload
+            const fileInput = document.getElementById(`design-upload-${service}`);
+            const uploadFeedback = document.getElementById(`upload-feedback-${service}`);
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    uploadFeedback.textContent = `Selected file: ${fileInput.files[0].name}`;
+                } else {
+                    uploadFeedback.textContent = 'No file selected';
+                }
+            });
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            // Reset file input, feedback, and confirmation message for all services
+            const servicesList = ['wedding', 'visiting', 'flex', 'digital', 'bill', 'letter'];
+            servicesList.forEach(service => {
+                const fileInput = document.getElementById(`design-upload-${service}`);
+                const uploadFeedback = document.getElementById(`upload-feedback-${service}`);
+                const confirmationMessage = document.getElementById(`confirmation-message-${service}`);
+                if (fileInput && uploadFeedback) {
+                    fileInput.value = '';
+                    uploadFeedback.textContent = 'No file selected';
+                }
+                if (confirmationMessage) {
+                    confirmationMessage.style.display = 'none';
+                    confirmationMessage.innerHTML = '';
+                }
+            });
+        }
+
+        function submitRequest(service) {
+            let selections = {};
+            let labels = {};
+
+            // Define options and labels for each service
+            if (service === 'wedding') {
+                selections = {
+                    paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                    designStyle: document.getElementById(`design-style-${service}`).value,
+                    finishing: document.getElementById(`finishing-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    paperQuality: 'Paper Quality',
+                    designStyle: 'Design Style',
+                    finishing: 'Finishing',
+                    orientation: 'Orientation',
+                    quantity: 'Quantity'
+                };
+            } else if (service === 'visiting') {
+                selections = {
+                    paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                    finishing: document.getElementById(`finishing-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    printingLocation: document.getElementById(`printing-location-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    paperQuality: 'Paper Quality',
+                    finishing: 'Lamination',
+                    orientation: 'Orientation',
+                    printingLocation: 'Printing Location',
+                    quantity: 'Quantity'
+                };
+            } else if (service === 'flex') {
+                selections = {
+                    material: document.getElementById(`material-${service}`).value,
+                    finishing: document.getElementById(`finishing-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    material: 'Material',
+                    finishing: 'Finishing',
+                    orientation: 'Orientation',
+                    quantity: 'Quantity'
+                };
+            } else if (service === 'digital') {
+                selections = {
+                    paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                    finishing: document.getElementById(`finishing-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    printingLocation: document.getElementById(`printing-location-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    paperQuality: 'Paper Quality',
+                    finishing: 'Finishing',
+                    orientation: 'Orientation',
+                    printingLocation: 'Printing Location',
+                    quantity: 'Quantity'
+                };
+            } else if (service === 'bill') {
+                selections = {
+                    paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                    binding: document.getElementById(`binding-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    paperQuality: 'Paper Quality',
+                    binding: 'Binding',
+                    orientation: 'Orientation',
+                    quantity: 'Quantity (Books)'
+                };
+            } else if (service === 'letter') {
+                selections = {
+                    paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                    orientation: document.getElementById(`orientation-${service}`).value,
+                    printingLocation: document.getElementById(`printing-location-${service}`).value,
+                    quantity: document.getElementById(`quantity-${service}`).value
+                };
+                labels = {
+                    paperQuality: 'Paper Quality',
+                    orientation: 'Orientation',
+                    printingLocation: 'Printing Location',
+                    quantity: 'Quantity (Sheets)'
+                };
+            }
+
+            const fileInput = document.getElementById(`design-upload-${service}`);
+            const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file uploaded';
+
+            // Build the confirmation message
+            let confirmationHTML = `
+                <p>Thank you for your request!</p>
+                <p><strong>Your Selections:</strong></p>
+            `;
+            for (const [key, value] of Object.entries(selections)) {
+                let displayValue = value.charAt(0).toUpperCase() + value.slice(1);
+                if (key === 'finishing' && value === 'none') displayValue = 'No Finish';
+                if (key === 'binding' && value === 'gum') displayValue = 'Gum Binding';
+                if (key === 'binding' && value === 'staple') displayValue = 'Staple Binding';
+                if (key === 'printingLocation' && value === 'front') displayValue = 'Front';
+                if (key === 'printingLocation' && value === 'both') displayValue = 'Both Sides';
+                if (key === 'printingLocation' && value === 'header') displayValue = 'Header Only';
+                if (key === 'printingLocation' && value === 'header-footer') displayValue = 'Header and Footer';
+                confirmationHTML += `<p>${labels[key]}: ${displayValue}</p>`;
+            }
+            confirmationHTML += `
+                <p>Uploaded File: ${fileName}</p>
+                <p>We will contact you shortly to confirm your order and provide a quote.</p>
+            `;
+
+            const confirmationMessage = document.getElementById(`confirmation-message-${service}`);
+            confirmationMessage.innerHTML = confirmationHTML;
+            confirmationMessage.className = 'confirmation-message';
+            confirmationMessage.style.display = 'block';
+
+            // Scroll to the confirmation message
+            confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
 </body>
 </html>
