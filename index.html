@@ -6,97 +6,66 @@
     <meta name="description" content="Farhan Printing Press offers wedding cards, visiting cards, flex printing, and more in Siddharth Nagar. Contact us for quality printing services!">
     <meta name="keywords" content="printing services Siddharth Nagar, wedding cards, visiting cards, flex printing, bill books, letter pads">
     <meta name="author" content="Farhan Printing Press">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Farhan Printing Press - Siddharth Nagar">
+    <meta property="og:description" content="Your one-stop solution for wedding cards, visiting cards, flex printing, and more in Siddharth Nagar.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:url" content="https://farhanprintpress.github.io/farhanprintpress/">
+    <meta property="og:type" content="website">
     <title data-lang="title">Farhan Printing Press</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://farhanprintpress.github.io/farhanprintpress/favicon.ico">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
-            background-color: #f9f9f9;
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-            background-size: 50px 50px;
+            background-color: #f4f6f8;
         }
 
-        /* Hindi Font */
         [lang="hi"] {
             font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background-color: #0d1b2a;
             color: white;
-            padding: 1.5rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            transition: transform 0.3s;
-        }
-
-        .logo i {
-            color: #f1c40f;
-            font-size: 2rem;
-        }
-
-        .logo span {
-            font-weight: 700;
-        }
-
-        .logo span small {
-            font-weight: 300;
-            font-size: 1rem;
-            margin-left: 0.2rem;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .header-content {
             text-align: center;
-            flex: 1;
-            padding: 0 2rem;
+            padding: 1.5rem;
+            position: relative;
         }
 
         header h1 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
         }
 
         .language-toggle {
             position: absolute;
             top: 1.5rem;
-            right: 2rem;
-            z-index: 100;
+            right: 1.5rem;
         }
 
         .language-toggle select {
             padding: 0.3rem;
             border-radius: 4px;
-            border: 1px solid #dfe6e9;
+            border: 1px solid #ccc;
             background: #f9f9f9;
             font-size: 0.9rem;
             cursor: pointer;
         }
 
         nav {
-            background: #34495e;
+            background-color: #1b263b;
             padding: 1rem;
         }
 
@@ -111,117 +80,26 @@
             color: white;
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 400;
-            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #f1c40f;
+            text-decoration: underline;
         }
 
         .hero {
-            position: relative;
-            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-            height: 350px;
+            background: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 300px;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero h2 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin: 0.5rem 0 1rem;
-            position: relative;
-            z-index: 1;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .hero .cta-btn {
-            position: relative;
-            z-index: 1;
-            padding: 0.75rem 1.5rem;
-            background-color: #25D366;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .hero .cta-btn:hover {
-            background-color: #1ebe52;
-        }
-
-        .home-content {
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .home-content h3 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .home-content p {
-            font-size: 1rem;
-            color: #7f8c8d;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .home-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .highlight {
-            background: white;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            text-align: center;
-        }
-
-        .highlight i {
-            font-size: 1.5rem;
-            color: #3498db;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight p {
-            font-size: 0.9rem;
-            color: #2c3e50;
-            font-weight: 500;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
         .services {
@@ -234,8 +112,6 @@
             text-align: center;
             margin-bottom: 2rem;
             font-size: 2rem;
-            color: #2c3e50;
-            font-weight: 600;
         }
 
         .service-grid {
@@ -247,49 +123,33 @@
 
         .service-card {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
             padding: 1.5rem;
             text-align: center;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid transparent;
-            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            transition: transform 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border-color: #f1c40f;
+            transform: translateY(-5px);
         }
 
         .service-card i {
             font-size: 2.5rem;
-            color: #3498db;
+            color: #0d1b2a;
             margin-bottom: 1rem;
-            transition: color 0.3s;
-        }
-
-        .service-card:hover i {
-            color: #f1c40f;
         }
 
         .service-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: #7f8c8d;
-            font-size: 0.9rem;
         }
 
         .contact {
             padding: 3rem 1rem;
-            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            background-color: #1b263b;
             color: white;
             text-align: center;
         }
@@ -297,45 +157,30 @@
         .contact h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            font-weight: 600;
         }
 
         .contact p {
-            margin-bottom: 0.75rem;
-            font-weight: 300;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            flex-wrap: wrap;
         }
 
         .contact a {
-            color: #f1c40f;
+            color: #f4f6f8;
             text-decoration: none;
-            transition: color 0.3s;
         }
 
         .contact a:hover {
-            color: #f39c12;
-        }
-
-        .contact i {
-            color: #f1c40f;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        .contact i:hover {
-            color: #f39c12;
+            text-decoration: underline;
         }
 
         footer {
-            background: #2c3e50;
+            background-color: #0d1b2a;
             color: white;
             text-align: center;
             padding: 1rem;
-            font-weight: 300;
         }
 
         .modal {
@@ -345,7 +190,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -355,27 +200,21 @@
         .modal-content {
             background: white;
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 8px;
             max-width: 500px;
             width: 90%;
             position: relative;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             max-height: 80vh;
             overflow-y: auto;
-            display: flex;
-            flex-direction: column;
         }
 
         .modal-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
-            font-weight: 600;
         }
 
         .modal-content p {
             margin-bottom: 1rem;
-            color: #7f8c8d;
         }
 
         .modal-content ul {
@@ -386,12 +225,10 @@
 
         .modal-content ul li {
             margin-bottom: 0.5rem;
-            color: #7f8c8d;
         }
 
         .modal-options {
             margin-top: 1rem;
-            flex-grow: 1;
         }
 
         .modal-option {
@@ -403,688 +240,169 @@
         }
 
         .modal-option label {
-            font-weight: 600;
+            font-weight: bold;
             font-size: 0.9rem;
-            color: #2c3e50;
         }
 
         .modal-option select {
-            padding: 0.5rem;
-            border: 1px solid #dfe6e9;
-            border-radius: 6px;
+            padding: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             font-size: 0.9rem;
             width: 60%;
-            background: #f9f9f9;
-            transition: border-color 0.3s;
         }
 
-        .modal-option select:focus {
-            border-color: #3498db;
-            outline: none;
+        .upload-section {
+            margin-top: 1rem;
         }
 
-        .modal-price {
-            font-weight: 600;
-            color: #e74c3c;
-            margin-bottom: 1rem;
-        }
-
-        .whatsapp-btn {
+        .upload-section label {
             display: block;
-            margin: 1rem 0 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-section input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .upload-section p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        .upload-section .error-message {
+            color: #d32f2f;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 1rem auto 0;
             padding: 0.75rem 1.5rem;
-            background-color: #25D366;
+            background-color: #0d1b2a;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             font-size: 1rem;
-            font-weight: 500;
             cursor: pointer;
             transition: background-color 0.3s;
-            text-decoration: none;
+            position: relative;
+        }
+
+        .submit-btn:disabled {
+            background-color: #4a5a72;
+            cursor: not-allowed;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background-color: #1b263b;
+        }
+
+        .confirmation-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e6f4ea;
+            border: 1px solid #34c759;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #2e7d32;
             text-align: center;
         }
 
-        .whatsapp-btn:hover {
-            background-color: #1ebe52;
+        .modal-price {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #e67e22;
         }
 
         .close-btn {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 1.8rem;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: #7f8c8d;
-            transition: color 0.3s;
-            z-index: 1001;
         }
 
-        .close-btn:hover {
-            color: #e74c3c;
-        }
-
-        .whatsapp-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .whatsapp-chat:hover {
-            background-color: #1ebe52;
-            transform: scale(1.1);
-        }
-
-        .whatsapp-chat i {
-            font-size: 2rem;
-        }
-
-        /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .header-content {
-                padding: 0.5rem 0 0 0;
-            }
-
-            header h1 {
-                font-size: 1.2rem;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .logo i {
-                font-size: 1.8rem;
-            }
-
-            .language-toggle {
-                top: 5rem;
-                right: 1rem;
-            }
-
-            nav {
-                padding: 0.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.75rem;
-                text-align: center;
-            }
-
-            nav a {
-                font-size: 1rem;
-                display: block;
-                padding: 0.5rem 1rem;
-            }
-
-            .hero {
-                height: 280px;
-            }
-
             .hero h2 {
                 font-size: 1.8rem;
             }
 
-            .hero p {
-                font-size: 0.9rem;
-                margin: 0.4rem 0;
-            }
-
-            .hero .cta-btn {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-            }
-
-            .home-content {
-                padding: 1.5rem 0.5rem;
-            }
-
-            .home-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .home-content p {
-                font-size: 0.9rem;
-            }
-
-            .highlight {
-                width: 100%;
-                max-width: 180px;
-                padding: 0.75rem;
-            }
-
-            .highlight i {
-                font-size: 1.2rem;
-            }
-
-            .highlight p {
-                font-size: 0.8rem;
-            }
-
-            .services {
-                padding: 2rem 0.5rem;
-            }
-
-            .services h2 {
-                font-size: 1.5rem;
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
 
             .service-card {
                 width: 100%;
-                max-width: 260px;
-                padding: 1rem;
-            }
-
-            .service-card i {
-                font-size: 2rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.1rem;
-            }
-
-            .service-card p {
-                font-size: 0.85rem;
-            }
-
-            .contact {
-                padding: 2rem 0.5rem;
-            }
-
-            .contact h2 {
-                font-size: 1.5rem;
-            }
-
-            .contact p {
-                font-size: 0.9rem;
-                gap: 0.4rem;
-            }
-
-            .contact a {
-                font-size: 0.9rem;
-            }
-
-            .contact i {
-                font-size: 1rem;
-            }
-
-            .contact .phone-numbers {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                margin: 0.5rem 0;
-            }
-
-            .modal-content {
-                padding: 1.5rem;
-                max-width: 90%;
-                max-height: 70vh;
-            }
-
-            .modal-content h3 {
-                font-size: 1.2rem;
-            }
-
-            .modal-content p {
-                font-size: 0.85rem;
-            }
-
-            .modal-content ul li {
-                font-size: 0.85rem;
-            }
-
-            .modal-option {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.3rem;
-            }
-
-            .modal-option label {
-                font-size: 0.85rem;
-            }
-
-            .modal-option select {
-                width: 100%;
-                font-size: 0.85rem;
-                padding: 0.4rem;
-            }
-
-            .modal-price {
-                font-size: 0.9rem;
-            }
-
-            .whatsapp-btn {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-                margin: 0.5rem 0;
-            }
-
-            .close-btn {
-                top: 10px;
-                right: 10px;
-                font-size: 1.5rem;
-            }
-
-            .whatsapp-chat {
-                width: 50px;
-                height: 50px;
-                bottom: 15px;
-                right: 15px;
-            }
-
-            .whatsapp-chat i {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 0.75rem;
-            }
-
-            header h1 {
-                font-size: 1rem;
-            }
-
-            .logo {
-                font-size: 1.3rem;
-            }
-
-            .logo i {
-                font-size: 1.5rem;
-            }
-
-            .logo span small {
-                font-size: 0.8rem;
+                max-width: 300px;
             }
 
             .language-toggle {
-                top: 4.5rem;
-                right: 0.75rem;
+                top: 1rem;
+                right: 1rem;
             }
 
             .language-toggle select {
                 font-size: 0.8rem;
-                padding: 0.2rem;
             }
 
-            nav {
-                padding: 0.5rem;
+            .modal-content {
+                padding: 1.5rem;
+                max-height: 70vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
             }
 
-            nav ul {
-                gap: 0.5rem;
-            }
-
-            nav a {
+            header p {
                 font-size: 0.9rem;
-                padding: 0.4rem 0.8rem;
-            }
-
-            .hero {
-                height: 240px;
             }
 
             .hero h2 {
                 font-size: 1.5rem;
             }
 
-            .hero p {
-                font-size: 0.8rem;
+            .services h2, .contact h2 {
+                font-size: 1.5rem;
             }
 
-            .hero .cta-btn {
-                font-size: 0.8rem;
-                padding: 0.4rem 0.8rem;
+            .language-toggle {
+                top: 0.8rem;
+                right: 0.8rem;
             }
 
-            .home-content {
-                padding: 1.2rem 0.5rem;
-            }
-
-            .home-content h3 {
-                font-size: 1.3rem;
-            }
-
-            .home-content p {
-                font-size: 0.85rem;
-            }
-
-            .highlight {
-                max-width: 160px;
-                padding: 0.6rem;
-            }
-
-            .highlight i {
-                font-size: 1rem;
-            }
-
-            .highlight p {
+            .language-toggle select {
                 font-size: 0.75rem;
-            }
-
-            .services {
-                padding: 1.5rem 0.5rem;
-            }
-
-            .services h2 {
-                font-size: 1.3rem;
-            }
-
-            .service-grid {
-                gap: 1rem;
-            }
-
-            .service-card {
-                max-width: 240px;
-                padding: 0.8rem;
-            }
-
-            .service-card i {
-                font-size: 1.8rem;
-            }
-
-            .service-card h3 {
-                font-size: 1rem;
-            }
-
-            .service-card p {
-                font-size: 0.8rem;
-            }
-
-            .contact {
-                padding: 1.5rem 0.5rem;
-            }
-
-            .contact h2 {
-                font-size: 1.3rem;
-            }
-
-            .contact p {
-                font-size: 0.85rem;
-                gap: 0.3rem;
-            }
-
-            .contact a {
-                font-size: 0.85rem;
-            }
-
-            .contact i {
-                font-size: 0.9rem;
-            }
-
-            .contact .phone-numbers {
-                gap: 0.4rem;
-                margin: 0.4rem 0;
             }
 
             .modal-content {
                 padding: 1rem;
                 max-height: 65vh;
             }
-
-            .modal-content h3 {
-                font-size: 1.1rem;
-            }
-
-            .modal-content p {
-                font-size: 0.8rem;
-            }
-
-            .modal-content ul li {
-                font-size: 0.8rem;
-            }
-
-            .modal-option label {
-                font-size: 0.8rem;
-            }
-
-            .modal-option select {
-                font-size: 0.8rem;
-                padding: 0.3rem;
-            }
-
-            .modal-price {
-                font-size: 0.85rem;
-            }
-
-            .whatsapp-btn {
-                font-size: 0.85rem;
-                padding: 0.4rem 0.8rem;
-                margin: 0.5rem 0;
-            }
-
-            .close-btn {
-                top: 8px;
-                right: 8px;
-                font-size: 1.3rem;
-            }
-
-            .whatsapp-chat {
-                width: 45px;
-                height: 45px;
-                bottom: 10px;
-                right: 10px;
-            }
-
-            .whatsapp-chat i {
-                font-size: 1.3rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            header {
-                padding: 0.5rem;
-            }
-
-            header h1 {
-                font-size: 0.9rem;
-            }
-
-            .logo {
-                font-size: 1.1rem;
-            }
-
-            .logo i {
-                font-size: 1.3rem;
-            }
-
-            .logo span small {
-                font-size: 0.7rem;
-            }
-
-            .language-toggle {
-                top: 4rem;
-                right: 0.5rem;
-            }
-
-            .language-toggle select {
-                font-size: 0.75rem;
-                padding: 0.15rem;
-            }
-
-            nav a {
-                font-size: 0.85rem;
-                padding: 0.3rem 0.6rem;
-            }
-
-            .hero {
-                height: 200px;
-            }
-
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-
-            .hero p {
-                font-size: 0.75rem;
-                margin: 0.3rem 0;
-            }
-
-            .hero .cta-btn {
-                font-size: 0.75rem;
-                padding: 0.3rem 0.6rem;
-            }
-
-            .home-content {
-                padding: 1rem 0.3rem;
-            }
-
-            .home-content h3 {
-                font-size: 1.1rem;
-            }
-
-            .home-content p {
-                font-size: 0.8rem;
-            }
-
-            .highlight {
-                max-width: 140px;
-                padding: 0.5rem;
-            }
-
-            .highlight i {
-                font-size: 0.9rem;
-            }
-
-            .highlight p {
-                font-size: 0.7rem;
-            }
-
-            .services {
-                padding: 1rem 0.3rem;
-            }
-
-            .services h2 {
-                font-size: 1.1rem;
-            }
-
-            .service-grid {
-                gap: 0.8rem;
-            }
-
-            .service-card {
-                max-width: 100%;
-                padding: 0.6rem;
-            }
-
-            .service-card i {
-                font-size: 1.5rem;
-            }
-
-            .service-card h3 {
-                font-size: 0.9rem;
-            }
-
-            .service-card p {
-                font-size: 0.75rem;
-            }
-
-            .contact {
-                padding: 1rem 0.3rem;
-            }
-
-            .contact h2 {
-                font-size: 1.1rem;
-            }
-
-            .contact p {
-                font-size: 0.8rem;
-                gap: 0.25rem;
-            }
-
-            .contact a {
-                font-size: 0.8rem;
-            }
-
-            .contact i {
-                font-size: 0.85rem;
-            }
-
-            .modal-content {
-                padding: 0.8rem;
-                max-height: 60vh;
-            }
-
-            .modal-content h3 {
-                font-size: 1rem;
-            }
-
-            .modal-content p {
-                font-size: 0.75rem;
-            }
-
-            .modal-content ul li {
-                font-size: 0.75rem;
-            }
-
-            .modal-option label {
-                font-size: 0.75rem;
-            }
-
-            .modal-option select {
-                font-size: 0.75rem;
-                padding: 0.25rem;
-            }
-
-            .modal-price {
-                font-size: 0.8rem;
-            }
-
-            .whatsapp-btn {
-                font-size: 0.8rem;
-                padding: 0.3rem 0.6rem;
-                margin: 0.5rem 0;
-            }
-
-            .close-btn {
-                top: 6px;
-                right: 6px;
-                font-size: 1.2rem;
-            }
-
-            .whatsapp-chat {
-                width: 40px;
-                height: 40px;
-                bottom: 8px;
-                right: 8px;
-            }
-
-            .whatsapp-chat i {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <i class="fas fa-print"></i>
-            <span data-lang="logo">Farhan <small>Printing Press</small></span>
-        </div>
-        <div class="header-content">
-            <h1 data-lang="header-title">Quality Printing Services in Siddharth Nagar</h1>
-        </div>
+        <h1 data-lang="header-title">Farhan Printing Press</h1>
+        <p data-lang="header-subtitle">Printing & Stationery Services - Siddharth Nagar</p>
         <div class="language-toggle">
-            <select id="language-select" onchange="changeLanguage()">
+            <select id="language-select" onchange="changeLanguage()" aria-label="Select Language">
                 <option value="en">English</option>
                 <option value="hi">हिन्दी</option>
             </select>
@@ -1094,32 +412,11 @@
         <ul>
             <li><a href="#home" data-lang="nav-home">Home</a></li>
             <li><a href="#services" data-lang="nav-services">Services</a></li>
-            <li><a href="#track-order" data-lang="nav-track-order">Track Order</a></li>
             <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
         </ul>
     </nav>
-    <section id="home" class="hero" alt="Printing press hero image">
+    <section id="home" class="hero">
         <h2 data-lang="hero-title">Your One-Stop Print Solution</h2>
-        <p data-lang="hero-subtitle">From Wedding Cards to Flex Printing – We Bring Your Ideas to Life!</p>
-        <a href="https://wa.me/+919838644687?text=Hello%2C%20I%20want%20to%20learn%20more%20about%20your%20printing%20services%21" target="_blank" class="cta-btn" data-lang="hero-cta">Contact Us on WhatsApp</a>
-    </section>
-    <section class="home-content">
-        <h3 data-lang="home-title">Welcome to Farhan Printing Press</h3>
-        <p data-lang="home-description">Based in Siddharth Nagar, Farhan Printing Press has been providing high-quality printing and stationery services for over a decade. Whether you need elegant wedding cards, professional visiting cards, or large-scale flex printing, we’re here to deliver exceptional results with a fast turnaround.</p>
-        <div class="home-highlights">
-            <div class="highlight">
-                <i class="fas fa-clock"></i>
-                <p data-lang="highlight-experience">Over 10 Years of Experience</p>
-            </div>
-            <div class="highlight">
-                <i class="fas fa-star"></i>
-                <p data-lang="highlight-quality">High-Quality Printing</p>
-            </div>
-            <div class="highlight">
-                <i class="fas fa-shipping-fast"></i>
-                <p data-lang="highlight-turnaround">Fast Turnaround</p>
-            </div>
-        </div>
     </section>
     <section id="services" class="services">
         <h2 data-lang="services-title">Our Services</h2>
@@ -1156,60 +453,32 @@
             </div>
         </div>
     </section>
-    <section id="track-order" class="services">
-        <h2 data-lang="track-order-title">Track Your Order</h2>
-        <div class="service-grid">
-            <div class="service-card" onclick="window.open('https://wa.me/+919838644687?text=I%20want%20to%20track%20my%20order', '_blank')">
-                <i class="fas fa-truck"></i>
-                <h3 data-lang="track-order">Track Your Order</h3>
-                <p data-lang="track-order-desc">Check the status of your order via WhatsApp.</p>
-            </div>
-        </div>
-    </section>
     <section id="contact" class="contact">
         <h2 data-lang="contact-title">Contact Us</h2>
-        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/MoK3G1FZXpAs1Wb79" target="_blank" data-lang="contact-address">Near SBI Bank, Belauha Bazar, Siddharth Nagar</a></p>
-        <p><i class="fas fa-phone"></i> <span data-lang="contact-call">Call Us</span></p>
-        <div class="phone-numbers">
-            <a href="tel:+919935644687">+91 99356 44687</a>
-            <a href="tel:+919838644687">+91 98386 44687</a>
-            <a href="tel:+919140242441">+91 91402 42441</a>
-        </div>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+919838644687" target="_blank" data-lang="contact-whatsapp">WhatsApp Us</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/farhan_printing_press?igsh=c3E4dWE3bmF0bWFu" target="_blank" data-lang="contact-instagram">Follow us on Instagram</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:farhanprintpress@gmail.com">farhanprintpress@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com" target="_blank" data-lang="contact-address">Near SBI Bank, Belauha Bazar, Siddharth Nagar</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919876543210" target="_blank" data-lang="contact-whatsapp">WhatsApp Us</a></p>
     </section>
     <footer>
-        <p data-lang="footer">© 2025 Farhan Printing Press. All rights reserved.</p>
+        <p data-lang="footer">© <span id="current-year"></span> Farhan Printing Press. All rights reserved.</p>
     </footer>
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">×</span>
+            <span class="close-btn" onclick="closeModal()" aria-label="Close Modal">×</span>
             <h3 id="modal-title"></h3>
             <div id="modal-description"></div>
         </div>
     </div>
-    <a href="https://wa.me/+919838644687?text=Hello%2C%20I%20have%20a%20question%20about%20your%20printing%20services%21" target="_blank" class="whatsapp-chat">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     <script>
         const translations = {
             en: {
                 title: "Farhan Printing Press",
-                logo: "Farhan <small>Printing Press</small>",
-                "header-title": "Quality Printing Services in Siddharth Nagar",
+                "header-title": "Farhan Printing Press",
+                "header-subtitle": "Printing & Stationery Services - Siddharth Nagar",
                 "nav-home": "Home",
                 "nav-services": "Services",
-                "nav-track-order": "Track Order",
                 "nav-contact": "Contact",
                 "hero-title": "Your One-Stop Print Solution",
-                "hero-subtitle": "From Wedding Cards to Flex Printing – We Bring Your Ideas to Life!",
-                "hero-cta": "Contact Us on WhatsApp",
-                "home-title": "Welcome to Farhan Printing Press",
-                "home-description": "Based in Siddharth Nagar, Farhan Printing Press has been providing high-quality printing and stationery services for over a decade. Whether you need elegant wedding cards, professional visiting cards, or large-scale flex printing, we’re here to deliver exceptional results with a fast turnaround.",
-                "highlight-experience": "Over 10 Years of Experience",
-                "highlight-quality": "High-Quality Printing",
-                "highlight-turnaround": "Fast Turnaround",
                 "services-title": "Our Services",
                 "service-wedding": "Wedding Card Printing",
                 "service-wedding-desc": "Elegant and customizable wedding cards.",
@@ -1223,16 +492,10 @@
                 "service-bill-desc": "Customized bill books for your business.",
                 "service-letter": "Letter Pad Printing",
                 "service-letter-desc": "Personalized letter pads with your logo.",
-                "track-order-title": "Track Your Order",
-                "track-order": "Track Your Order",
-                "track-order-desc": "Check the status of your order via WhatsApp.",
                 "contact-title": "Contact Us",
                 "contact-address": "Near SBI Bank, Belauha Bazar, Siddharth Nagar",
-                "contact-call": "Call Us",
                 "contact-whatsapp": "WhatsApp Us",
-                "contact-instagram": "Follow us on Instagram",
-                footer: "© 2025 Farhan Printing Press. All rights reserved.",
-                // Modal translations
+                footer: "© [year] Farhan Printing Press. All rights reserved.",
                 "wedding-title": "Wedding Card Printing",
                 "wedding-description": `
                     <p>Design your perfect wedding card with Farhan Printing Press. Please provide the following details to help us create a card that matches your vision:</p>
@@ -1240,10 +503,8 @@
                         <li><strong>Size:</strong> Standard (5 x 7 inches) or custom dimensions</li>
                         <li><strong>Minimum Order:</strong> 50 units</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹500 for 50 units (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "wedding-whatsapp": "Send via WhatsApp",
                 "visiting-title": "Visiting Card",
                 "visiting-description": `
                     <p>Make a lasting impression with our Standard Visiting Cards, designed to communicate your professional identity effectively.</p>
@@ -1251,10 +512,8 @@
                         <li><strong>Size:</strong> 3.5 x 2 inches</li>
                         <li><strong>Minimum Order:</strong> 100 units</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹200 for 100 units (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "visiting-whatsapp": "Send via WhatsApp",
                 "flex-title": "Flex Printing",
                 "flex-description": `
                     <p>Create impactful banners and hoardings with our Flex Printing services, perfect for large-format displays.</p>
@@ -1262,10 +521,8 @@
                         <li><strong>Size:</strong> Custom dimensions (specify in your request)</li>
                         <li><strong>Minimum Order:</strong> 1 unit</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹100 per square foot (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "flex-whatsapp": "Send via WhatsApp",
                 "digital-title": "Digital Printing",
                 "digital-description": `
                     <p>Fast and cost-effective Digital Printing services for a variety of needs, from flyers to brochures.</p>
@@ -1273,10 +530,8 @@
                         <li><strong>Size:</strong> A4, A5, or custom dimensions</li>
                         <li><strong>Minimum Order:</strong> 10 units</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹10 per page for 10 units (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "digital-whatsapp": "Send via WhatsApp",
                 "bill-title": "Bill Book Printing",
                 "bill-description": `
                     <p>Customized bill books designed for your business, ensuring a professional look for invoices.</p>
@@ -1284,10 +539,8 @@
                         <li><strong>Size:</strong> A5 or custom dimensions</li>
                         <li><strong>Minimum Order:</strong> 5 books (50 sheets per book)</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹300 for 5 books (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "bill-whatsapp": "Send via WhatsApp",
                 "letter-title": "Letter Pad Printing",
                 "letter-description": `
                     <p>Personalized letter pads with your company logo and details, ideal for official correspondence.</p>
@@ -1295,11 +548,8 @@
                         <li><strong>Size:</strong> A4 or custom dimensions</li>
                         <li><strong>Minimum Order:</strong> 100 sheets</li>
                     </ul>
-                    <p class="modal-price">Starting at ₹150 for 100 sheets (final price depends on selections).</p>
-                    <p>Select your preferences below, then click the button to send your request via WhatsApp.</p>
+                    <p>Select your preferences below, and upload your design file if available. Contact us to finalize your order and get a tailored quote.</p>
                 `,
-                "letter-whatsapp": "Send via WhatsApp",
-                // Modal dropdown labels
                 "label-paper-quality": "Paper Quality",
                 "label-design-style": "Design Style",
                 "label-finishing": "Finishing",
@@ -1310,24 +560,56 @@
                 "label-material": "Material",
                 "label-binding": "Binding",
                 "label-quantity-books": "Quantity (Books)",
-                "label-quantity-sheets": "Quantity (Sheets)"
+                "label-quantity-sheets": "Quantity (Sheets)",
+                "label-upload": "Upload Your Design (Optional)",
+                "upload-feedback": "No file selected",
+                "upload-error-size": "File size exceeds 5MB. Please upload a smaller file.",
+                "upload-error-type": "Invalid file type. Please upload a PDF, JPG, or PNG file.",
+                "submit-btn": "Submit Request",
+                "submit-btn-processing": "Processing...",
+                "confirmation-thank-you": "Thank you for your request!",
+                "confirmation-selections": "Your Selections:",
+                "confirmation-uploaded-file": "Uploaded File",
+                "confirmation-message": "We will contact you shortly to confirm your order and provide a quote.",
+                "paper-quality-matte": "300 GSM Matte",
+                "paper-quality-glossy": "300 GSM Glossy",
+                "paper-quality-textured": "Premium Textured Paper",
+                "paper-quality-matte-80": "80 GSM Matte",
+                "paper-quality-glossy-100": "100 GSM Glossy",
+                "paper-quality-premium-120": "Premium 120 GSM",
+                "paper-quality-standard-70": "70 GSM Standard",
+                "paper-quality-premium-80": "80 GSM Premium",
+                "paper-quality-standard-80": "80 GSM Standard",
+                "paper-quality-premium-100": "100 GSM Premium",
+                "design-style-traditional": "Traditional",
+                "design-style-modern": "Modern",
+                "design-style-minimalist": "Minimalist",
+                "design-style-custom": "Custom Design",
+                "finishing-none": "No Finish",
+                "finishing-embossing": "Embossing",
+                "finishing-foil": "Foil Stamping",
+                "finishing-uv": "UV Coating",
+                "finishing-matte": "Matte Lamination",
+                "finishing-glossy": "Glossy Lamination",
+                "orientation-portrait": "Portrait",
+                "orientation-landscape": "Landscape",
+                "printing-location-front": "Front",
+                "printing-location-both": "Both Sides",
+                "printing-location-header": "Header Only",
+                "printing-location-header-footer": "Header and Footer",
+                "material-standard": "Standard Vinyl",
+                "material-premium": "Premium Vinyl",
+                "binding-gum": "Gum Binding",
+                "binding-staple": "Staple Binding"
             },
             hi: {
                 title: "फरहान प्रिंटिंग प्रेस",
-                logo: "फरहान <small>प्रिंटिंग प्रेस</small>",
-                "header-title": "सिद्धार्थ नगर में गुणवत्तापूर्ण प्रिंटिंग सेवाएँ",
+                "header-title": "फरहान प्रिंटिंग प्रेस",
+                "header-subtitle": "प्रिंटिंग और स्टेशनरी सेवाएँ - सिद्धार्थ नगर",
                 "nav-home": "होम",
                 "nav-services": "सेवाएँ",
-                "nav-track-order": "ऑर्डर ट्रैक करें",
                 "nav-contact": "संपर्क",
                 "hero-title": "आपकी वन-स्टॉप प्रिंटिंग सॉल्यूशन",
-                "hero-subtitle": "शादी के कार्ड से लेकर फ्लेक्स प्रिंटिंग तक – हम आपके विचारों को जीवंत करते हैं!",
-                "hero-cta": "व्हाट्सएप पर हमसे संपर्क करें",
-                "home-title": "फरहान प्रिंटिंग प्रेस में आपका स्वागत है",
-                "home-description": "सिद्धार्थ नगर में स्थित, फरहान प्रिंटिंग प्रेस पिछले एक दशक से उच्च गुणवत्ता वाली प्रिंटिंग और स्टेशनरी सेवाएँ प्रदान कर रहा है। चाहे आपको शानदार शादी के कार्ड, पेशेवर विजिटिंग कार्ड, या बड़े पैमाने पर फ्लेक्स प्रिंटिंग की आवश्यकता हो, हम तेजी से उत्कृष्ट परिणाम देने के लिए यहाँ हैं।",
-                "highlight-experience": "10+ वर्षों का अनुभव",
-                "highlight-quality": "उच्च गुणवत्ता वाली प्रिंटिंग",
-                "highlight-turnaround": "तेजी से डिलीवरी",
                 "services-title": "हमारी सेवाएँ",
                 "service-wedding": "शादी के कार्ड प्रिंटिंग",
                 "service-wedding-desc": "शानदार और अनुकूलन योग्य शादी के कार्ड।",
@@ -1341,16 +623,10 @@
                 "service-bill-desc": "आपके व्यवसाय के लिए अनुकूलित बिल बुक।",
                 "service-letter": "लेटर पैड प्रिंटिंग",
                 "service-letter-desc": "आपके लोगो के साथ व्यक्तिगत लेटर पैड।",
-                "track-order-title": "अपना ऑर्डर ट्रैक करें",
-                "track-order": "अपना ऑर्डर ट्रैक करें",
-                "track-order-desc": "व्हाट्सएप के माध्यम से अपने ऑर्डर की स्थिति जांचें।",
                 "contact-title": "हमसे संपर्क करें",
                 "contact-address": "एसबीआई बैंक के पास, बेलौहा बाजार, सिद्धार्थ नगर",
-                "contact-call": "हमें कॉल करें",
                 "contact-whatsapp": "हमें व्हाट्सएप करें",
-                "contact-instagram": "हमें इंस्टाग्राम पर फॉलो करें",
-                footer: "© 2025 फरहान प्रिंटिंग प्रेस। सभी अधिकार सुरक्षित।",
-                // Modal translations
+                footer: "© [year] फरहान प्रिंटिंग प्रेस। सभी अधिकार सुरक्षित।",
                 "wedding-title": "शादी के कार्ड प्रिंटिंग",
                 "wedding-description": `
                     <p>फरहान प्रिंटिंग प्रेस के साथ अपने सपनों का शादी का कार्ड डिज़ाइन करें। कृपया निम्नलिखित विवरण प्रदान करें ताकि हम आपके दृष्टिकोण से मेल खाने वाला कार्ड बना सकें:</p>
@@ -1358,10 +634,8 @@
                         <li><strong>आकार:</strong> मानक (5 x 7 इंच) या कस्टम आयाम</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 50 इकाइयाँ</li>
                     </ul>
-                    <p class="modal-price">50 इकाइयों के लिए ₹500 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "wedding-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
                 "visiting-title": "विजिटिंग कार्ड",
                 "visiting-description": `
                     <p>हमारे मानक विजिटिंग कार्ड के साथ एक स्थायी प्रभाव बनाएं, जो आपकी पेशेवर पहचान को प्रभावी ढंग से व्यक्त करने के लिए डिज़ाइन किए गए हैं।</p>
@@ -1369,10 +643,8 @@
                         <li><strong>आकार:</strong> 3.5 x 2 इंच</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 100 इकाइयाँ</li>
                     </ul>
-                    <p class="modal-price">100 इकाइयों के लिए ₹200 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "visiting-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
                 "flex-title": "फ्लेक्स प्रिंटिंग",
                 "flex-description": `
                     <p>हमारी फ्लेक्स प्रिंटिंग सेवाओं के साथ प्रभावशाली बैनर और होर्डिंग बनाएं, जो बड़े प्रारूप प्रदर्शन के लिए उपयुक्त हैं।</p>
@@ -1380,10 +652,8 @@
                         <li><strong>आकार:</strong> कस्टम आयाम (अपने अनुरोध में निर्दिष्ट करें)</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 1 इकाई</li>
                     </ul>
-                    <p class="modal-price">प्रति वर्ग फुट ₹100 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "flex-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
                 "digital-title": "डिजिटल प्रिंटिंग",
                 "digital-description": `
                     <p>फ्लायर्स से लेकर ब्रोशर तक विभिन्न जरूरतों के लिए तेज और लागत प्रभावी डिजिटल प्रिंटिंग सेवाएँ।</p>
@@ -1391,10 +661,8 @@
                         <li><strong>आकार:</strong> A4, A5, या कस्टम आयाम</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 10 इकाइयाँ</li>
                     </ul>
-                    <p class="modal-price">10 इकाइयों के लिए प्रति पेज ₹10 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "digital-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
                 "bill-title": "बिल बुक प्रिंटिंग",
                 "bill-description": `
                     <p>आपके व्यवसाय के लिए अनुकूलित बिल बुक, जो चालान के लिए एक पेशेवर लुक सुनिश्चित करते हैं।</p>
@@ -1402,10 +670,8 @@
                         <li><strong>आकार:</strong> A5 या कस्टम आयाम</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 5 पुस्तकें (प्रति पुस्तक 50 शीट)</li>
                     </ul>
-                    <p class="modal-price">5 पुस्तकों के लिए ₹300 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "bill-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
                 "letter-title": "लेटर पैड प्रिंटिंग",
                 "letter-description": `
                     <p>आपके कंपनी लोगो और विवरण के साथ व्यक्तिगत लेटर पैड, जो आधिकारिक पत्राचार के लिए आदर्श हैं।</p>
@@ -1413,11 +679,8 @@
                         <li><strong>आकार:</strong> A4 या कस्टम आयाम</li>
                         <li><strong>न्यूनतम ऑर्डर:</strong> 100 शीट</li>
                     </ul>
-                    <p class="modal-price">100 शीट के लिए ₹150 से शुरू (अंतिम कीमत चयन पर निर्भर करती है)।</p>
-                    <p>नीचे अपनी प्राथमिकताएँ चुनें, फिर बटन पर क्लिक करके व्हाट्सएप के माध्यम से अपनी अनुरोध भेजें।</p>
+                    <p>नीचे अपनी प्राथमिकताएँ चुनें, और यदि उपलब्ध हो तो अपनी डिज़ाइन फ़ाइल अपलोड करें। अपने ऑर्डर को अंतिम रूप देने और अनुकूलित कोट प्राप्त करने के लिए हमसे संपर्क करें।</p>
                 `,
-                "letter-whatsapp": "व्हाट्सएप के माध्यम से भेजें",
-                // Modal dropdown labels
                 "label-paper-quality": "कागज की गुणवत्ता",
                 "label-design-style": "डिज़ाइन शैली",
                 "label-finishing": "फिनिशिंग",
@@ -1428,7 +691,47 @@
                 "label-material": "सामग्री",
                 "label-binding": "बाइंडिंग",
                 "label-quantity-books": "मात्रा (पुस्तकें)",
-                "label-quantity-sheets": "मात्रा (शीट)"
+                "label-quantity-sheets": "मात्रा (शीट)",
+                "label-upload": "अपनी डिज़ाइन अपलोड करें (वैकल्पिक)",
+                "upload-feedback": "कोई फ़ाइल चयनित नहीं",
+                "upload-error-size": "फ़ाइल का आकार 5MB से अधिक है। कृपया छोटी फ़ाइल अपलोड करें।",
+                "upload-error-type": "अमान्य फ़ाइल प्रकार। कृपया PDF, JPG, या PNG फ़ाइल अपलोड करें।",
+                "submit-btn": "अनुरोध सबमिट करें",
+                "submit-btn-processing": "प्रसंस्करण...",
+                "confirmation-thank-you": "आपके अनुरोध के लिए धन्यवाद!",
+                "confirmation-selections": "आपके चयन:",
+                "confirmation-uploaded-file": "अपलोड की गई फ़ाइल",
+                "confirmation-message": "हम जल्द ही आपके ऑर्डर की पुष्टि करने और कोट प्रदान करने के लिए आपसे संपर्क करेंगे।",
+                "paper-quality-matte": "300 GSM मैट",
+                "paper-quality-glossy": "300 GSM ग्लॉसी",
+                "paper-quality-textured": "प्रीमियम टेक्सचर्ड पेपर",
+                "paper-quality-matte-80": "80 GSM मैट",
+                "paper-quality-glossy-100": "100 GSM ग्लॉसी",
+                "paper-quality-premium-120": "प्रीमियम 120 GSM",
+                "paper-quality-standard-70": "70 GSM मानक",
+                "paper-quality-premium-80": "80 GSM प्रीमियम",
+                "paper-quality-standard-80": "80 GSM मानक",
+                "paper-quality-premium-100": "100 GSM प्रीमियम",
+                "design-style-traditional": "पारंपरिक",
+                "design-style-modern": "आधुनिक",
+                "design-style-minimalist": "न्यूनतम",
+                "design-style-custom": "कस्टम डिज़ाइन",
+                "finishing-none": "कोई फिनिश नहीं",
+                "finishing-embossing": "एम्बॉसिंग",
+                "finishing-foil": "फ़ॉइल स्टैम्पिंग",
+                "finishing-uv": "UV कोटिंग",
+                "finishing-matte": "मैट लैमिनेशन",
+                "finishing-glossy": "ग्लॉसी लैमिनेशन",
+                "orientation-portrait": "पोर्ट्रेट",
+                "orientation-landscape": "लैंडस्केप",
+                "printing-location-front": "सामने",
+                "printing-location-both": "दोनों तरफ",
+                "printing-location-header": "केवल हेडर",
+                "printing-location-header-footer": "हेडर और फूटर",
+                "material-standard": "मानक विनाइल",
+                "material-premium": "प्रीमियम विनाइल",
+                "binding-gum": "गम बाइंडिंग",
+                "binding-staple": "स्टेपल बाइंडिंग"
             }
         };
 
@@ -1444,40 +747,40 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="paper-quality-wedding" data-lang="label-paper-quality">${translations.en["label-paper-quality"]}</label>
-                            <select id="paper-quality-wedding" name="paper_quality">
-                                <option value="300 GSM Matte">300 GSM Matte</option>
-                                <option value="300 GSM Glossy">300 GSM Glossy</option>
-                                <option value="Premium Textured Paper">Premium Textured Paper</option>
+                            <select id="paper-quality-wedding">
+                                <option value="matte" data-lang="paper-quality-matte">${translations.en["paper-quality-matte"]}</option>
+                                <option value="glossy" data-lang="paper-quality-glossy">${translations.en["paper-quality-glossy"]}</option>
+                                <option value="textured" data-lang="paper-quality-textured">${translations.en["paper-quality-textured"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="design-style-wedding" data-lang="label-design-style">${translations.en["label-design-style"]}</label>
-                            <select id="design-style-wedding" name="design_style">
-                                <option value="Traditional">Traditional</option>
-                                <option value="Modern">Modern</option>
-                                <option value="Minimalist">Minimalist</option>
-                                <option value="Custom Design">Custom Design</option>
+                            <select id="design-style-wedding">
+                                <option value="traditional" data-lang="design-style-traditional">${translations.en["design-style-traditional"]}</option>
+                                <option value="modern" data-lang="design-style-modern">${translations.en["design-style-modern"]}</option>
+                                <option value="minimalist" data-lang="design-style-minimalist">${translations.en["design-style-minimalist"]}</option>
+                                <option value="custom" data-lang="design-style-custom">${translations.en["design-style-custom"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="finishing-wedding" data-lang="label-finishing">${translations.en["label-finishing"]}</label>
-                            <select id="finishing-wedding" name="finishing">
-                                <option value="No Finish">No Finish</option>
-                                <option value="Embossing">Embossing</option>
-                                <option value="Foil Stamping">Foil Stamping</option>
-                                <option value="UV Coating">UV Coating</option>
+                            <select id="finishing-wedding">
+                                <option value="none" data-lang="finishing-none">${translations.en["finishing-none"]}</option>
+                                <option value="embossing" data-lang="finishing-embossing">${translations.en["finishing-embossing"]}</option>
+                                <option value="foil" data-lang="finishing-foil">${translations.en["finishing-foil"]}</option>
+                                <option value="uv" data-lang="finishing-uv">${translations.en["finishing-uv"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-wedding" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-wedding" name="orientation">
-                                <option value="Portrait">Portrait</option>
-                                <option value="Landscape">Landscape</option>
+                            <select id="orientation-wedding">
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-wedding" data-lang="label-quantity">${translations.en["label-quantity"]}</label>
-                            <select id="quantity-wedding" name="quantity">
+                            <select id="quantity-wedding">
                                 <option value="50">50</option>
                                 <option value="100">100</option>
                                 <option value="200">200</option>
@@ -1485,7 +788,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('wedding')" data-lang="wedding-whatsapp">${translations.en["wedding-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-wedding" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-wedding" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-wedding" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-wedding" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('wedding')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-wedding" style="display: none;"></div>
                 `
             },
             visiting: {
@@ -1495,36 +805,36 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="paper-quality-visiting" data-lang="label-paper-quality">${translations.en["label-paper-quality"]}</label>
-                            <select id="paper-quality-visiting" name="paper_quality">
-                                <option value="300 GSM Matte">300 GSM Matte</option>
-                                <option value="300 GSM Glossy">300 GSM Glossy</option>
+                            <select id="paper-quality-visiting">
+                                <option value="matte" data-lang="paper-quality-matte">${translations.en["paper-quality-matte"]}</option>
+                                <option value="glossy" data-lang="paper-quality-glossy">${translations.en["paper-quality-glossy"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="finishing-visiting" data-lang="label-lamination">${translations.en["label-lamination"]}</label>
-                            <select id="finishing-visiting" name="finishing">
-                                <option value="No Finish">No Finish</option>
-                                <option value="Matte Lamination">Matte Lamination</option>
-                                <option value="Glossy Lamination">Glossy Lamination</option>
+                            <select id="finishing-visiting">
+                                <option value="none" data-lang="finishing-none">${translations.en["finishing-none"]}</option>
+                                <option value="matte" data-lang="finishing-matte">${translations.en["finishing-matte"]}</option>
+                                <option value="glossy" data-lang="finishing-glossy">${translations.en["finishing-glossy"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-visiting" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-visiting" name="orientation">
-                                <option value="Landscape">Landscape</option>
-                                <option value="Portrait">Portrait</option>
+                            <select id="orientation-visiting">
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="printing-location-visiting" data-lang="label-printing-location">${translations.en["label-printing-location"]}</label>
-                            <select id="printing-location-visiting" name="printing_location">
-                                <option value="Front">Front</option>
-                                <option value="Both Sides">Both Sides</option>
+                            <select id="printing-location-visiting">
+                                <option value="front" data-lang="printing-location-front">${translations.en["printing-location-front"]}</option>
+                                <option value="both" data-lang="printing-location-both">${translations.en["printing-location-both"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-visiting" data-lang="label-quantity">${translations.en["label-quantity"]}</label>
-                            <select id="quantity-visiting" name="quantity">
+                            <select id="quantity-visiting">
                                 <option value="100">100</option>
                                 <option value="200">200</option>
                                 <option value="500">500</option>
@@ -1532,7 +842,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('visiting')" data-lang="visiting-whatsapp">${translations.en["visiting-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-visiting" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-visiting" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-visiting" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-visiting" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('visiting')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-visiting" style="display: none;"></div>
                 `
             },
             flex: {
@@ -1542,29 +859,29 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="material-flex" data-lang="label-material">${translations.en["label-material"]}</label>
-                            <select id="material-flex" name="material">
-                                <option value="Standard Vinyl">Standard Vinyl</option>
-                                <option value="Premium Vinyl">Premium Vinyl</option>
+                            <select id="material-flex">
+                                <option value="standard" data-lang="material-standard">${translations.en["material-standard"]}</option>
+                                <option value="premium" data-lang="material-premium">${translations.en["material-premium"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="finishing-flex" data-lang="label-finishing">${translations.en["label-finishing"]}</label>
-                            <select id="finishing-flex" name="finishing">
-                                <option value="No Finish">No Finish</option>
-                                <option value="Matte Lamination">Matte Lamination</option>
-                                <option value="Glossy Lamination">Glossy Lamination</option>
+                            <select id="finishing-flex">
+                                <option value="none" data-lang="finishing-none">${translations.en["finishing-none"]}</option>
+                                <option value="matte" data-lang="finishing-matte">${translations.en["finishing-matte"]}</option>
+                                <option value="glossy" data-lang="finishing-glossy">${translations.en["finishing-glossy"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-flex" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-flex" name="orientation">
-                                <option value="Landscape">Landscape</option>
-                                <option value="Portrait">Portrait</option>
+                            <select id="orientation-flex">
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-flex" data-lang="label-quantity">${translations.en["label-quantity"]}</label>
-                            <select id="quantity-flex" name="quantity">
+                            <select id="quantity-flex">
                                 <option value="1">1</option>
                                 <option value="5">5</option>
                                 <option value="10">10</option>
@@ -1572,7 +889,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('flex')" data-lang="flex-whatsapp">${translations.en["flex-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-flex" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-flex" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-flex" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-flex" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('flex')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-flex" style="display: none;"></div>
                 `
             },
             digital: {
@@ -1582,37 +906,37 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="paper-quality-digital" data-lang="label-paper-quality">${translations.en["label-paper-quality"]}</label>
-                            <select id="paper-quality-digital" name="paper_quality">
-                                <option value="80 GSM Matte">80 GSM Matte</option>
-                                <option value="100 GSM Glossy">100 GSM Glossy</option>
-                                <option value="Premium 120 GSM">Premium 120 GSM</option>
+                            <select id="paper-quality-digital">
+                                <option value="matte" data-lang="paper-quality-matte-80">${translations.en["paper-quality-matte-80"]}</option>
+                                <option value="glossy" data-lang="paper-quality-glossy-100">${translations.en["paper-quality-glossy-100"]}</option>
+                                <option value="premium" data-lang="paper-quality-premium-120">${translations.en["paper-quality-premium-120"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="finishing-digital" data-lang="label-finishing">${translations.en["label-finishing"]}</label>
-                            <select id="finishing-digital" name="finishing">
-                                <option value="No Finish">No Finish</option>
-                                <option value="Matte Lamination">Matte Lamination</option>
-                                <option value="Glossy Lamination">Glossy Lamination</option>
+                            <select id="finishing-digital">
+                                <option value="none" data-lang="finishing-none">${translations.en["finishing-none"]}</option>
+                                <option value="matte" data-lang="finishing-matte">${translations.en["finishing-matte"]}</option>
+                                <option value="glossy" data-lang="finishing-glossy">${translations.en["finishing-glossy"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-digital" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-digital" name="orientation">
-                                <option value="Portrait">Portrait</option>
-                                <option value="Landscape">Landscape</option>
+                            <select id="orientation-digital">
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="printing-location-digital" data-lang="label-printing-location">${translations.en["label-printing-location"]}</label>
-                            <select id="printing-location-digital" name="printing_location">
-                                <option value="Front">Front</option>
-                                <option value="Both Sides">Both Sides</option>
+                            <select id="printing-location-digital">
+                                <option value="front" data-lang="printing-location-front">${translations.en["printing-location-front"]}</option>
+                                <option value="both" data-lang="printing-location-both">${translations.en["printing-location-both"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-digital" data-lang="label-quantity">${translations.en["label-quantity"]}</label>
-                            <select id="quantity-digital" name="quantity">
+                            <select id="quantity-digital">
                                 <option value="10">10</option>
                                 <option value="50">50</option>
                                 <option value="100">100</option>
@@ -1620,7 +944,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('digital')" data-lang="digital-whatsapp">${translations.en["digital-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-digital" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-digital" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-digital" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-digital" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('digital')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-digital" style="display: none;"></div>
                 `
             },
             bill: {
@@ -1630,28 +961,28 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="paper-quality-bill" data-lang="label-paper-quality">${translations.en["label-paper-quality"]}</label>
-                            <select id="paper-quality-bill" name="paper_quality">
-                                <option value="70 GSM Standard">70 GSM Standard</option>
-                                <option value="80 GSM Premium">80 GSM Premium</option>
+                            <select id="paper-quality-bill">
+                                <option value="standard" data-lang="paper-quality-standard-70">${translations.en["paper-quality-standard-70"]}</option>
+                                <option value="premium" data-lang="paper-quality-premium-80">${translations.en["paper-quality-premium-80"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="binding-bill" data-lang="label-binding">${translations.en["label-binding"]}</label>
-                            <select id="binding-bill" name="binding">
-                                <option value="Gum Binding">Gum Binding</option>
-                                <option value="Staple Binding">Staple Binding</option>
+                            <select id="binding-bill">
+                                <option value="gum" data-lang="binding-gum">${translations.en["binding-gum"]}</option>
+                                <option value="staple" data-lang="binding-staple">${translations.en["binding-staple"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-bill" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-bill" name="orientation">
-                                <option value="Portrait">Portrait</option>
-                                <option value="Landscape">Landscape</option>
+                            <select id="orientation-bill">
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-bill" data-lang="label-quantity-books">${translations.en["label-quantity-books"]}</label>
-                            <select id="quantity-bill" name="quantity">
+                            <select id="quantity-bill">
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>
@@ -1659,7 +990,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('bill')" data-lang="bill-whatsapp">${translations.en["bill-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-bill" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-bill" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-bill" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-bill" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('bill')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-bill" style="display: none;"></div>
                 `
             },
             letter: {
@@ -1669,28 +1007,28 @@
                     <div class="modal-options">
                         <div class="modal-option">
                             <label for="paper-quality-letter" data-lang="label-paper-quality">${translations.en["label-paper-quality"]}</label>
-                            <select id="paper-quality-letter" name="paper_quality">
-                                <option value="80 GSM Standard">80 GSM Standard</option>
-                                <option value="100 GSM Premium">100 GSM Premium</option>
+                            <select id="paper-quality-letter">
+                                <option value="standard" data-lang="paper-quality-standard-80">${translations.en["paper-quality-standard-80"]}</option>
+                                <option value="premium" data-lang="paper-quality-premium-100">${translations.en["paper-quality-premium-100"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="orientation-letter" data-lang="label-orientation">${translations.en["label-orientation"]}</label>
-                            <select id="orientation-letter" name="orientation">
-                                <option value="Portrait">Portrait</option>
-                                <option value="Landscape">Landscape</option>
+                            <select id="orientation-letter">
+                                <option value="portrait" data-lang="orientation-portrait">${translations.en["orientation-portrait"]}</option>
+                                <option value="landscape" data-lang="orientation-landscape">${translations.en["orientation-landscape"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="printing-location-letter" data-lang="label-printing-location">${translations.en["label-printing-location"]}</label>
-                            <select id="printing-location-letter" name="printing_location">
-                                <option value="Header Only">Header Only</option>
-                                <option value="Header and Footer">Header and Footer</option>
+                            <select id="printing-location-letter">
+                                <option value="header" data-lang="printing-location-header">${translations.en["printing-location-header"]}</option>
+                                <option value="header-footer" data-lang="printing-location-header-footer">${translations.en["printing-location-header-footer"]}</option>
                             </select>
                         </div>
                         <div class="modal-option">
                             <label for="quantity-letter" data-lang="label-quantity-sheets">${translations.en["label-quantity-sheets"]}</label>
-                            <select id="quantity-letter" name="quantity">
+                            <select id="quantity-letter">
                                 <option value="100">100</option>
                                 <option value="200">200</option>
                                 <option value="500">500</option>
@@ -1698,7 +1036,14 @@
                             </select>
                         </div>
                     </div>
-                    <a href="#" class="whatsapp-btn" onclick="sendWhatsApp('letter')" data-lang="letter-whatsapp">${translations.en["letter-whatsapp"]}</a>
+                    <div class="upload-section">
+                        <label for="design-upload-letter" data-lang="label-upload">${translations.en["label-upload"]}</label>
+                        <input type="file" id="design-upload-letter" accept=".pdf,.jpg,.png">
+                        <p id="upload-feedback-letter" data-lang="upload-feedback">${translations.en["upload-feedback"]}</p>
+                        <p id="upload-error-letter" class="error-message"></p>
+                    </div>
+                    <button class="submit-btn" onclick="submitRequest('letter')" data-lang="submit-btn">${translations.en["submit-btn"]}</button>
+                    <div id="confirmation-message-letter" style="display: none;"></div>
                 `
             }
         };
@@ -1715,65 +1060,263 @@
         }
 
         function updateModalLabels(lang) {
-            const labels = modalDescription.querySelectorAll('[data-lang]');
-            labels.forEach(label => {
-                const key = label.getAttribute('data-lang');
-                label.textContent = translations[lang][key];
+            const elements = modalDescription.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (element.tagName === 'OPTION') {
+                    element.textContent = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
             });
+        }
+
+        function validateFile(file, service, lang) {
+            const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+            const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
+            const errorElement = document.getElementById(`upload-error-${service}`);
+            errorElement.style.display = 'none';
+            errorElement.textContent = '';
+
+            if (file.size > maxSize) {
+                errorElement.textContent = translations[lang]["upload-error-size"];
+                errorElement.style.display = 'block';
+                return false;
+            }
+
+            if (!allowedTypes.includes(file.type)) {
+                errorElement.textContent = translations[lang]["upload-error-type"];
+                errorElement.style.display = 'block';
+                return false;
+            }
+
+            return true;
         }
 
         function openModal(service) {
             const currentLang = document.documentElement.lang || 'en';
             updateModalContent(service, currentLang);
             modal.style.display = 'flex';
-        }
 
-        function sendWhatsApp(service) {
-            const options = document.querySelectorAll(`#modal-description .modal-options select`);
-            let message = `New ${modalTitle.textContent} Request\n\n`;
-            
-            options.forEach(option => {
-                const label = option.previousElementSibling.textContent;
-                const value = option.value;
-                message += `${label}: ${value}\n`;
+            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+            firstFocusable.focus();
+
+            modal.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusable) {
+                            e.preventDefault();
+                            lastFocusable.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusable) {
+                            e.preventDefault();
+                            firstFocusable.focus();
+                        }
+                    }
+                }
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
             });
 
-            message += `\nPlease attach your design file (if any) and provide your contact details (email and phone number).`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/+919838644687?text=${encodedMessage}`;
-            window.open(whatsappUrl, '_blank');
+            const fileInput = document.getElementById(`design-upload-${service}`);
+            const uploadFeedback = document.getElementById(`upload-feedback-${service}`);
+            const uploadError = document.getElementById(`upload-error-${service}`);
+            fileInput.addEventListener('change', function() {
+                const lang = document.documentElement.lang || 'en';
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    if (validateFile(file, service, lang)) {
+                        uploadFeedback.textContent = `${translations[lang]["confirmation-uploaded-file"]}: ${file.name}`;
+                        uploadError.style.display = 'none';
+                    } else {
+                        fileInput.value = '';
+                        uploadFeedback.textContent = translations[lang]["upload-feedback"];
+                    }
+                } else {
+                    uploadFeedback.textContent = translations[lang]["upload-feedback"];
+                    uploadError.style.display = 'none';
+                }
+            });
         }
 
         function closeModal() {
             modal.style.display = 'none';
             const servicesList = ['wedding', 'visiting', 'flex', 'digital', 'bill', 'letter'];
             servicesList.forEach(service => {
+                const fileInput = document.getElementById(`design-upload-${service}`);
+                const uploadFeedback = document.getElementById(`upload-feedback-${service}`);
+                const uploadError = document.getElementById(`upload-error-${service}`);
+                const confirmationMessage = document.getElementById(`confirmation-message-${service}`);
                 const selects = document.querySelectorAll(`#modal-description select[id*="${service}"]`);
+                if (fileInput && uploadFeedback && uploadError) {
+                    fileInput.value = '';
+                    const lang = document.documentElement.lang || 'en';
+                    uploadFeedback.textContent = translations[lang]["upload-feedback"];
+                    uploadError.style.display = 'none';
+                }
+                if (confirmationMessage) {
+                    confirmationMessage.style.display = 'none';
+                    confirmationMessage.innerHTML = '';
+                }
                 selects.forEach(select => {
                     select.selectedIndex = 0;
                 });
             });
+            document.querySelector('body').focus();
         }
 
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                closeModal();
+        function submitRequest(service) {
+            const lang = document.documentElement.lang || 'en';
+            const submitBtn = document.querySelector(`#modal-description button.submit-btn`);
+            const fileInput = document.getElementById(`design-upload-${service}`);
+            if (fileInput.files.length > 0 && !validateFile(fileInput.files[0], service, lang)) {
+                return;
             }
-        };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = translations[lang]["submit-btn-processing"];
+
+            setTimeout(() => {
+                let selections = {};
+                let labels = {};
+
+                if (service === 'wedding') {
+                    selections = {
+                        paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                        designStyle: document.getElementById(`design-style-${service}`).value,
+                        finishing: document.getElementById(`finishing-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        paperQuality: translations[lang]["label-paper-quality"],
+                        designStyle: translations[lang]["label-design-style"],
+                        finishing: translations[lang]["label-finishing"],
+                        orientation: translations[lang]["label-orientation"],
+                        quantity: translations[lang]["label-quantity"]
+                    };
+                } else if (service === 'visiting') {
+                    selections = {
+                        paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                        finishing: document.getElementById(`finishing-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        printingLocation: document.getElementById(`printing-location-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        paperQuality: translations[lang]["label-paper-quality"],
+                        finishing: translations[lang]["label-lamination"],
+                        orientation: translations[lang]["label-orientation"],
+                        printingLocation: translations[lang]["label-printing-location"],
+                        quantity: translations[lang]["label-quantity"]
+                    };
+                } else if (service === 'flex') {
+                    selections = {
+                        material: document.getElementById(`material-${service}`).value,
+                        finishing: document.getElementById(`finishing-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        material: translations[lang]["label-material"],
+                        finishing: translations[lang]["label-finishing"],
+                        orientation: translations[lang]["label-orientation"],
+                        quantity: translations[lang]["label-quantity"]
+                    };
+                } else if (service === 'digital') {
+                    selections = {
+                        paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                        finishing: document.getElementById(`finishing-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        printingLocation: document.getElementById(`printing-location-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        paperQuality: translations[lang]["label-paper-quality"],
+                        finishing: translations[lang]["label-finishing"],
+                        orientation: translations[lang]["label-orientation"],
+                        printingLocation: translations[lang]["label-printing-location"],
+                        quantity: translations[lang]["label-quantity"]
+                    };
+                } else if (service === 'bill') {
+                    selections = {
+                        paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                        binding: document.getElementById(`binding-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        paperQuality: translations[lang]["label-paper-quality"],
+                        binding: translations[lang]["label-binding"],
+                        orientation: translations[lang]["label-orientation"],
+                        quantity: translations[lang]["label-quantity-books"]
+                    };
+                } else if (service === 'letter') {
+                    selections = {
+                        paperQuality: document.getElementById(`paper-quality-${service}`).value,
+                        orientation: document.getElementById(`orientation-${service}`).value,
+                        printingLocation: document.getElementById(`printing-location-${service}`).value,
+                        quantity: document.getElementById(`quantity-${service}`).value
+                    };
+                    labels = {
+                        paperQuality: translations[lang]["label-paper-quality"],
+                        orientation: translations[lang]["label-orientation"],
+                        printingLocation: translations[lang]["label-printing-location"],
+                        quantity: translations[lang]["label-quantity-sheets"]
+                    };
+                }
+
+                const fileInput = document.getElementById(`design-upload-${service}`);
+                const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : translations[lang]["upload-feedback"];
+
+                let confirmationHTML = `
+                    <p>${translations[lang]["confirmation-thank-you"]}</p>
+                    <p><strong>${translations[lang]["confirmation-selections"]}</strong></p>
+                `;
+                for (const [key, value] of Object.entries(selections)) {
+                    let displayValue = value;
+                    const selectElement = document.getElementById(`${key}-${service}`);
+                    if (selectElement) {
+                        const selectedOption = selectElement.options[selectElement.selectedIndex];
+                        displayValue = translations[lang][selectedOption.getAttribute('data-lang')] || value;
+                    }
+                    confirmationHTML += `<p>${labels[key]}: ${displayValue}</p>`;
+                }
+                confirmationHTML += `
+                    <p>${translations[lang]["confirmation-uploaded-file"]}: ${fileName}</p>
+                    <p>${translations[lang]["confirmation-message"]}</p>
+                `;
+
+                const confirmationMessage = document.getElementById(`confirmation-message-${service}`);
+                confirmationMessage.innerHTML = confirmationHTML;
+                confirmationMessage.className = 'confirmation-message';
+                confirmationMessage.style.display = 'block';
+
+                submitBtn.disabled = false;
+                submitBtn.textContent = translations[lang]["submit-btn"];
+                confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+            }, 1000);
+        }
 
         function changeLanguage() {
             const lang = document.getElementById('language-select').value;
             localStorage.setItem('language', lang);
             document.documentElement.lang = lang;
 
-            // Update static content
             document.querySelectorAll('[data-lang]').forEach(element => {
                 const key = element.getAttribute('data-lang');
-                element.innerHTML = translations[lang][key];
+                if (key === 'footer') {
+                    const currentYear = new Date().getFullYear();
+                    element.textContent = translations[lang][key].replace('[year]', currentYear);
+                } else {
+                    element.textContent = translations[lang][key];
+                }
             });
 
-            // Update modal if open
             if (modal.style.display === 'flex') {
                 const currentService = Object.keys(services).find(service => 
                     modalTitle.textContent === translations[lang][services[service].title] ||
@@ -1784,16 +1327,25 @@
                 }
             }
 
-            // Update document title
             document.title = translations[lang].title;
+
+            const servicesList = ['wedding', 'visiting', 'flex', 'digital', 'bill', 'letter'];
+            servicesList.forEach(service => {
+                const uploadFeedback = document.getElementById(`upload-feedback-${service}`);
+                if (uploadFeedback && uploadFeedback.textContent === translations['en']["upload-feedback"]) {
+                    uploadFeedback.textContent = translations[lang]["upload-feedback"];
+                }
+            });
         }
 
-        // Load saved language preference
-        document.addEventListener('DOMContentLoaded', () => {
+        window.onload = function() {
             const savedLang = localStorage.getItem('language') || 'en';
             document.getElementById('language-select').value = savedLang;
             changeLanguage();
-        });
+
+            const currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+        };
     </script>
 </body>
 </html>
