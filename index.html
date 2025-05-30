@@ -1904,4 +1904,28 @@
                 options[input.name] = input.value;
             });
 
-            let message = `Hello, I would like to
+            let message = `Hello, I would like to order the following ${translations.en[`${service}-title`]}:\n`;
+            for (const [key, value] of Object.entries(options)) {
+                const label = translations.en[`label-${key.replace('_', '-')}`] || key.replace('_', ' ');
+                message += `${label}: ${value}\n`;
+            }
+
+            const priceText = modalPriceDisplay.textContent;
+            if (priceText && priceText !== 'Price not available') {
+                message += `\n${priceText}\n`;
+            }
+
+            message += `\nPlease provide further details or confirm the order.`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/+919838644687?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
