@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional poster printing services by Farhan Printing Press.">
+    <meta name="keywords" content="poster printing, printing services Siddharth Nagar">
+    <meta name="author" content="Farhan Printing Press">
+    <title>Poster Printing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://farhanprintpress.github.io/farhanprintpress/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+            background-size: 50px 50px;
+            padding-top: 120px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .logo i {
+            color: #f1c40f;
+            font-size: 1.8rem;
+        }
+
+        .logo span {
+            font-weight: 700;
+        }
+
+        .logo span small {
+            font-weight: 300;
+            font-size: 0.9rem;
+            margin-left: 0.2rem;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #f1c40f;
+            color: #2c3e50;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: color 0.3s;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://i.ibb.co/5hJPcH1V/Welcome.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0.5rem 0 1rem;
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .cta-btn {
+            position: relative;
+            z-index: 1;
+            padding: 0.75rem 1.5rem;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero .cta-btn:hover {
+            background-color: #1ebe52;
+        }
+
+        .service-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .service-options {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-options h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .option-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            background: #f9f9f9;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .option-btn.active {
+            background-color: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .option-btn:hover {
+            background-color: #ecf0f1;
+        }
+
+        .service-options .whatsapp-btn {
+            display: block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .service-options .whatsapp-btn:hover {
+            background-color: #1ebe52;
+        }
+
+        .service-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .service-image {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .service-image p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact {
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact p {
+            margin-bottom: 0.75rem;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact a {
+            color: #f1c40f;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #f39c12;
+        }
+
+        .contact i {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .contact i:hover {
+            color: #f39c12;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 300;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-height: 80vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+            color: #7f8c8d;
+        }
+
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul li {
+            margin-bottom: 0.5rem;
+            color: #7f8c8d;
+        }
+
+        .modal-options {
+            margin-top: 1rem;
+            flex-grow: 1;
+        }
+
+        .modal-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-option label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        .modal-option select,
+        .modal-option textarea,
+        .modal-option input {
+            padding: 0.5rem;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            width: 60%;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .modal-option textarea {
+            width: 60%;
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .modal-option select:focus,
+        .modal-option textarea:focus,
+        .modal-option input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .modal-price {
+            font-weight: 600;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            margin: 1rem 0 0;
+            padding: 0.75rem 1.5rem;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe52;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #7f8c8d;
+            transition: color 0.3s;
+            z-index: 1001;
+        }
+
+        .close-btn:hover {
+            color: #e74c3c;
+        }
+
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .whatsapp-chat:hover {
+            background-color: #1ebe52;
+            transform: scale(1.1);
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .cart-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+            margin-right: 0.5rem;
+        }
+
+        .cart-item button:hover {
+            background: #c0392b;
+        }
+
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-form input {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-options, .service-images {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 100px;
+            }
+
+            nav {
+                top: 50px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 0.3rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                padding: 0.2rem;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .logo i {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-print"></i>
+                <span>Farhan <small>Printing Press</small></span>
+            </div>
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#track-order">Track Order</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h2>Poster Printing</h2>
+        <p>High-quality posters tailored to your needs.</p>
+        <button class="cta-btn" onclick="openModal()">Order Now</button>
+    </section>
+    <section class="service-content">
+        <div class="service-options">
+            <h2>Poster Options</h2>
+            <div class="form-group">
+                <label for="poster-category">Poster Category</label>
+                <div class="option-grid" id="poster-category">
+                    <button class="option-btn" data-value="Poster">Poster</button>
+                </div>
+            </div>
+            <div class="form-group" id="color-group" style="display: none;">
+                <label for="color">Color</label>
+                <div class="option-grid" id="color">
+                    <button class="option-btn" data-value="1 color">1 color</button>
+                    <button class="option-btn" data-value="2 color">2 color</button>
+                    <button class="option-btn" data-value="multicolor (4 color)">multicolor (4 color)</button>
+                </div>
+            </div>
+            <div class="form-group" id="size-group" style="display: none;">
+                <label for="size">Size</label>
+                <div class="option-grid" id="size">
+                    <button class="option-btn" data-value="A4">A4</button>
+                    <button class="option-btn" data-value="A3">A3</button>
+                    <button class="option-btn" data-value="10 x 15">10 x 15</button>
+                    <button class="option-btn" data-value="15 x 20">15 x 20</button>
+                    <button class="option-btn" data-value="18 x 22">18 x 22</button>
+                </div>
+            </div>
+            <div class="form-group" id="quantity-group" style="display: none;">
+                <label for="quantity">Quantity</label>
+                <div class="option-grid" id="quantity">
+                    <button class="option-btn" data-value="100">100</button>
+                    <button class="option-btn" data-value="200">200</button>
+                    <button class="option-btn" data-value="500">500</button>
+                    <button class="option-btn" data-value="1000">1000</button>
+                    <button class="option-btn" data-value="2000">2000</button>
+                    <button class="option-btn" data-value="4000">4000</button>
+                    <button class="option-btn" data-value="8000">8000</button>
+                </div>
+            </div>
+            <div id="price-display" class="modal-price" style="margin-top: 1rem; display: none;">Price: ₹0</div>
+            <button id="add-to-cart-btn" class="whatsapp-btn" onclick="addToCart()">Add to Cart</button>
+            <a href="#" class="whatsapp-btn" onclick="openCart(); return false;" style="margin-top: 1rem;">Go to Cart</a>
+        </div>
+        <div class="service-images">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1591123120675-6f7f1a4b8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Example Poster">
+                <p>Example of a professional poster.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/MoK3G1FZXpAs1Wb79" target="_blank">Near SBI Bank, Belauha Bazar, Siddharth Nagar</a></p>
+        <p><i class="fas fa-phone"></i> Call Us</p>
+        <div class="phone-numbers">
+            <a href="tel:+919935644687">+91 99356 44687</a>
+            <a href="tel:+919838644687">+91 98386 44687</a>
+            <a href="tel:+919140242441">+91 91402 42441</a>
+        </div>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+919838644687" target="_blank">WhatsApp Us</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/farhan_printing_press?igsh=c3E4dWE3bmF0bWFu" target="_blank">Follow us on Instagram</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:farhanprintpress@gmail.com">farhanprintpress@gmail.com</a></p>
+    </section>
+    <footer>
+        <p>© 2025 Farhan Printing Press. All rights reserved.</p>
+    </footer>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCart()">×</span>
+            <h3>Your Order Summary</h3>
+            <div id="cart-items">
+                <p>Your cart is empty</p>
+            </div>
+            <div id="cart-total" class="modal-price"></div>
+            <form id="checkout-form" class="checkout-form">
+                <input type="text" id="checkout-name" placeholder="Your Name" required>
+                <input type="tel" id="checkout-phone" placeholder="Your Phone Number" required>
+                <button type="submit" class="whatsapp-btn">Proceed to Checkout</button>
+            </form>
+        </div>
+    </div>
+    <a href="https://wa.me/+919838644687?text=Hello%2C%20I%20have%20a%20question%20about%20your%20printing%20services%21" target="_blank" class="whatsapp-chat">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script>
+        const translations = {
+            en: {
+                "label-price-range": "Price Range (per unit)",
+                "label-quantity": "Quantity",
+                "label-size": "Size",
+                "label-paper-quality": "Paper Quality",
+                "label-design-style": "Design Style",
+                "label-finishing": "Finishing",
+                "label-orientation": "Orientation",
+                "label-lamination": "Lamination",
+                "label-printing-location": "Printing Location",
+                "label-material": "Material",
+                "label-binding": "Binding Type",
+                "label-sheets-per-book": "Sheets per Book",
+                "label-quantity-books": "Quantity (Books)",
+                "label-quantity-sheets": "Quantity (Sheets)",
+                "label-card-category": "Card Category",
+                "label-printing": "Printing",
+                "label-name": "Your Name"
+            }
+        };
+
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalPriceDisplay = document.getElementById('modal-price-display');
+        const cartModal = document.getElementById('cart-modal');
+        const checkoutForm = document.getElementById('checkout-form');
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+        let cart = [];
+        let selectedOptions = {
+            'poster-category': null,
+            'color': null,
+            'size': null,
+            'quantity': null
+        };
+
+        const priceData = {
+            'Poster': {
+                '1 color': {
+                    'A4': { 100: 150, 200: 250, 500: 550, 1000: 1000, 2000: 1800, 4000: 3400, 8000: 6500 },
+                    'A3': { 100: 200, 200: 350, 500: 700, 1000: 1300, 2000: 2400, 4000: 4500, 8000: 8500 },
+                    '10 x 15': { 100: 180, 200: 300, 500: 600, 1000: 1100, 2000: 2000, 4000: 3800, 8000: 7200 },
+                    '15 x 20': { 100: 250, 200: 400, 500: 800, 1000: 1500, 2000: 2800, 4000: 5200, 8000: 9800 },
+                    '18 x 22': { 100: 300, 200: 500, 500: 900, 1000: 1700, 2000: 3200, 4000: 6000, 8000: 11200 }
+                },
+                '2 color': {
+                    'A4': { 100: 200, 200: 350, 500: 700, 1000: 1300, 2000: 2400, 4000: 4500, 8000: 8500 },
+                    'A3': { 100: 250, 200: 400, 500: 800, 1000: 1500, 2000: 2800, 4000: 5200, 8000: 9800 },
+                    '10 x 15': { 100: 230, 200: 380, 500: 750, 1000: 1400, 2000: 2600, 4000: 4800, 8000: 9000 },
+                    '15 x 20': { 100: 300, 200: 500, 500: 900, 1000: 1700, 2000: 3200, 4000: 6000, 8000: 11200 },
+                    '18 x 22': { 100: 350, 200: 600, 500: 1000, 1000: 1900, 2000: 3600, 4000: 6800, 8000: 12800 }
+                },
+                'multicolor (4 color)': {
+                    'A4': { 100: 300, 200: 500, 500: 900, 1000: 1700, 2000: 3200, 4000: 6000, 8000: 11200 },
+                    'A3': { 100: 350, 200: 600, 500: 1000, 1000: 1900, 2000: 3600, 4000: 6800, 8000: 12800 },
+                    '10 x 15': { 100: 280, 200: 450, 500: 850, 1000: 1600, 2000: 3000, 4000: 5600, 8000: 10500 },
+                    '15 x 20': { 100: 400, 200: 700, 500: 1200, 1000: 2200, 2000: 4200, 4000: 8000, 8000: 15000 },
+                    '18 x 22': { 100: 450, 200: 800, 500: 1400, 1000: 2500, 2000: 4800, 4000: 9000, 8000: 17000 }
+                }
+            }
+        };
+
+        try {
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+                if (!Array.isArray(cart)) {
+                    console.error('Invalid cart data in localStorage, resetting cart');
+                    cart = [];
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+            }
+        } catch (e) {
+            console.error('Error parsing cart from localStorage:', e);
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, updating cart display');
+            updateCartDisplay();
+            initializeButtons();
+            if (!checkoutForm) {
+                console.error('Checkout form not found');
+            }
+        });
+
+        if (checkoutForm) {
+            checkoutForm.addEventListener('submit', (e) => {
+                console.log('Checkout form submitted');
+                e.preventDefault();
+                const nameInput = document.getElementById('checkout-name');
+                const phoneInput = document.getElementById('checkout-phone');
+                if (!nameInput || !phoneInput) {
+                    console.error('Checkout form inputs not found');
+                    alert('Form elements are missing. Please contact support.');
+                    return;
+                }
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                console.log('Name:', name, 'Phone:', phone);
+
+                if (name && phone) {
+                    checkout(name, phone);
+                } else {
+                    alert('Please enter both name and phone number.');
+                }
+            });
+        } else {
+            console.error('Checkout form not found in DOM');
+        }
+
+        function initializeButtons() {
+            const posterCategory = document.getElementById('poster-category');
+            if (posterCategory) {
+                posterCategory.querySelectorAll('.option-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        posterCategory.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        selectedOptions['poster-category'] = btn.getAttribute('data-value');
+                        updateOptions();
+                        console.log('Poster category selected:', selectedOptions['poster-category']);
+                    });
+                });
+            } else {
+                console.error('Element with id poster-category not found');
+            }
+        }
+
+        function updateOptions() {
+            const category = selectedOptions['poster-category'];
+            const colorGroup = document.getElementById('color-group');
+            const sizeGroup = document.getElementById('size-group');
+            const quantityGroup = document.getElementById('quantity-group');
+            const priceDisplay = document.getElementById('price-display');
+
+            if (colorGroup && sizeGroup && quantityGroup && priceDisplay) {
+                colorGroup.style.display = 'none';
+                sizeGroup.style.display = 'none';
+                quantityGroup.style.display = 'none';
+                priceDisplay.style.display = 'none';
+                selectedOptions['color'] = null;
+                selectedOptions['size'] = null;
+                selectedOptions['quantity'] = null;
+
+                if (category) {
+                    updateDynamicButtons('color', { '1 color': '1 color', '2 color': '2 color', 'multicolor (4 color)': 'multicolor (4 color)' });
+                    colorGroup.style.display = 'block';
+                    updateDynamicButtons('size', { 'A4': 'A4', 'A3': 'A3', '10 x 15': '10 x 15', '15 x 20': '15 x 20', '18 x 22': '18 x 22' });
+                    sizeGroup.style.display = 'block';
+                    updateQuantityButtons([100, 200, 500, 1000, 2000, 4000, 8000]);
+                    quantityGroup.style.display = 'block';
+                    priceDisplay.style.display = 'block';
+                    updatePrice();
+                }
+            } else {
+                console.error('Option groups or price display not found');
+            }
+        }
+
+        function updateDynamicButtons(containerId, options) {
+            const container = document.getElementById(containerId + '-group');
+            const optionGrid = document.getElementById(containerId);
+            if (container && optionGrid) {
+                optionGrid.innerHTML = '';
+                Object.keys(options).forEach(option => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.setAttribute('data-value', option);
+                    btn.textContent = option;
+                    btn.addEventListener('click', () => {
+                        optionGrid.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        if (containerId === 'color') {
+                            selectedOptions['color'] = option;
+                        } else if (containerId === 'size') {
+                            selectedOptions['size'] = option;
+                        }
+                        updatePrice();
+                        console.log(`${containerId} selected:`, option);
+                    });
+                    optionGrid.appendChild(btn);
+                });
+                container.style.display = 'block';
+            } else {
+                console.error(`Element with id ${containerId}-group or ${containerId} not found`);
+            }
+        }
+
+        function updateQuantityButtons(quantities) {
+            const container = document.getElementById('quantity-group');
+            const optionGrid = document.getElementById('quantity');
+            if (container && optionGrid) {
+                optionGrid.innerHTML = '';
+                quantities.forEach(qty => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.setAttribute('data-value', qty);
+                    btn.textContent = qty;
+                    btn.addEventListener('click', () => {
+                        optionGrid.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        selectedOptions['quantity'] = qty;
+                        updatePrice();
+                        console.log('Quantity selected:', qty);
+                    });
+                    optionGrid.appendChild(btn);
+                });
+                container.style.display = 'block';
+            } else {
+                console.error('Element with id quantity-group or quantity not found');
+            }
+        }
+
+        function openModal() {
+            try {
+                if (modal) {
+                    modal.style.display = 'flex';
+                    updatePrice();
+                    console.log('Modal opened');
+                }
+            } catch (e) {
+                console.error('Error in openModal:', e);
+            }
+        }
+
+        function closeModal() {
+            try {
+                if (modal) {
+                    modal.style.display = 'none';
+                    console.log('Modal closed');
+                }
+            } catch (e) {
+                console.error('Error in closeModal:', e);
+            }
+        }
+
+        function openCart() {
+            try {
+                if (!cartModal) {
+                    console.error('Cart modal not found');
+                    return;
+                }
+                updateCartDisplay();
+                cartModal.style.display = 'flex';
+                console.log('Cart modal opened');
+            } catch (e) {
+                console.error('Error in openCart:', e);
+            }
+        }
+
+        function closeCart() {
+            try {
+                if (cartModal) {
+                    cartModal.style.display = 'none';
+                    console.log('Cart modal closed');
+                }
+            } catch (e) {
+                console.error('Error in closeCart:', e);
+            }
+        }
+
+        function updateCartDisplay() {
+            try {
+                const cartItemsEl = document.getElementById('cart-items');
+                const cartCountEl = document.querySelector('.cart-count');
+                const cartTotalEl = document.getElementById('cart-total');
+
+                if (!cartItemsEl || !cartCountEl || !cartTotalEl) {
+                    console.error('Cart display elements not found');
+                    return;
+                }
+
+                if (!cart || cart.length === 0) {
+                    cartItemsEl.innerHTML = '<p>Your cart is empty</p>';
+                    cartTotalEl.textContent = '';
+                    cartCountEl.textContent = '0';
+                    console.log('Cart is empty');
+                    return;
+                }
+
+                let itemsHTML = '';
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    try {
+                        const options = JSON.parse(item.options || '{}');
+                        itemsHTML += `
+                            <div class="cart-item">
+                                <h4>${item.service || 'Unknown Service'}</h4>
+                                <p>${formatOptions(options)}</p>
+                                <p>Price: ₹${item.price || 0}</p>
+                                <button onclick="removeFromCart(${index})">Remove</button>
+                            </div>
+                        `;
+                        total += item.price || 0;
+                    } catch (e) {
+                        console.error(`Error rendering cart item ${index}:`, e);
+                    }
+                });
+
+                cartItemsEl.innerHTML = itemsHTML;
+                cartTotalEl.textContent = `Total: ₹${total}`;
+                cartCountEl.textContent = cart.length;
+                console.log('Cart updated:', cart);
+            } catch (e) {
+                console.error('Error in updateCartDisplay:', e);
+            }
+        }
+
+        function formatOptions(options) {
+            try {
+                let formatted = '';
+                for (const [key, value] of Object.entries(options)) {
+                    formatted += `${key.replace(/_/g, ' ')}: ${value}<br>`;
+                }
+                return formatted || 'No options selected';
+            } catch (e) {
+                console.error('Error in formatOptions:', e);
+                return 'Error formatting options';
+            }
+        }
+
+        function updatePrice() {
+            try {
+                const category = selectedOptions['poster-category'];
+                const color = selectedOptions['color'];
+                const size = selectedOptions['size'];
+                const quantity = selectedOptions['quantity'];
+                const priceDisplay = document.getElementById('price-display');
+
+                if (category && color && size && quantity) {
+                    const price = priceData[category][color][size][quantity] || 0;
+                    if (priceDisplay) {
+                        priceDisplay.textContent = `Price: ₹${price}`;
+                    }
+                } else if (priceDisplay) {
+                    priceDisplay.textContent = 'Price: Select all options';
+                }
+                console.log('Price updated:', priceDisplay ? priceDisplay.textContent : 'Price display not found');
+            } catch (e) {
+                console.error('Error in updatePrice:', e);
+                const priceDisplay = document.getElementById('price-display');
+                if (priceDisplay) priceDisplay.textContent = 'Price: Error';
+            }
+        }
+
+        function addToCart() {
+            try {
+                if (Object.values(selectedOptions).some(val => val === null)) {
+                    alert('Please select all options before adding to cart.');
+                    return;
+                }
+
+                const category = selectedOptions['poster-category'];
+                const color = selectedOptions['color'];
+                const size = selectedOptions['size'];
+                const quantity = selectedOptions['quantity'];
+                const price = priceData[category][color][size][quantity] || 0;
+
+                const cartItem = {
+                    service: 'Poster Printing',
+                    options: JSON.stringify({ 'poster-category': category, 'color': color, 'size': size, 'quantity': quantity }),
+                    price: price
+                };
+
+                cart.push(cartItem);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+                alert('Item added to cart!');
+                console.log('Item added to cart:', cartItem);
+            } catch (e) {
+                console.error('Error in addToCart:', e);
+                alert('Error adding item to cart');
+            }
+        }
+
+        function removeFromCart(index) {
+            try {
+                if (index >= 0 && index < cart.length) {
+                    console.log('Removing cart item at index:', index);
+                    cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartDisplay();
+                } else {
+                    console.error('Invalid cart index:', index);
+                }
+            } catch (e) {
+                console.error('Error in removeFromCart:', e);
+            }
+        }
+
+        function checkout(name, phone) {
+            try {
+                if (!cart.length) {
+                    alert('Your cart is empty!');
+                    console.log('Checkout attempted with empty cart');
+                    return;
+                }
+
+                localStorage.setItem('customer', JSON.stringify({ name, phone }));
+
+                let message = "Hello, I would like to place the following order:\n\n";
+                message += `Customer Name: ${name}\n`;
+                message += `Phone: ${phone}\n\n`;
+                message += `Order Details:\n`;
+
+                cart.forEach(item => {
+                    try {
+                        message += `\nService: ${item.service || 'Unknown Service'}\n`;
+                        message += `Options:\n${formatOptions(JSON.parse(item.options || '{}'))}\n`;
+                        message += `Price: ₹${item.price || 0}\n`;
+                    } catch (e) {
+                        console.error('Error formatting cart item in checkout:', e);
+                    }
+                });
+
+                const total = cart.reduce((sum, item) => sum + (item.price || 0), 0);
+                message += `\nTotal Amount: ₹${total}\n\nPlease confirm my order.`;
+
+                window.open(`https://wa.me/+919838644687?text=${encodeURIComponent(message)}`, '_blank');
+                window.location.href = 'invoice.html';
+            } catch (e) {
+                console.error('Error in checkout:', e);
+                alert('Error during checkout');
+            }
+        }
+    </script>
+</body>
+</html>
