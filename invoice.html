@@ -1,0 +1,514 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Farhan Printing Press</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .invoice-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .invoice-header {
+            padding: 25px 30px;
+            background: #2c3e50;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .invoice-id {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .business-info {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            border-bottom: 1px solid #eee;
+        }
+
+        .details-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 25px 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-box h3 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .detail-label {
+            min-width: 100px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: #333;
+        }
+
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .items-table th {
+            background: #f1f5f9;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 14px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .items-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .totals-section {
+            padding: 20px 30px;
+            text-align: right;
+        }
+
+        .total-row {
+            display: inline-flex;
+            justify-content: space-between;
+            min-width: 250px;
+            margin-bottom: 8px;
+        }
+
+        .total-label {
+            font-weight: 500;
+            color: #555;
+            margin-right: 20px;
+        }
+
+        .total-value {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .grand-total {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .thank-you-note {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .terms-section {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #eee;
+        }
+
+        .terms-section h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .terms-list {
+            padding-left: 20px;
+        }
+
+        .terms-list li {
+            margin-bottom: 5px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .invoice-footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+
+        .print-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 30px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .print-btn:hover, .back-btn:hover {
+            background: #1a5276;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .invoice-wrapper, .invoice-wrapper * {
+                visibility: visible;
+            }
+            .invoice-wrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                box-shadow: none;
+                margin: 0;
+            }
+            .print-btn, .back-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-wrapper">
+        <!-- Header -->
+        <div class="invoice-header">
+            <div class="logo">
+                <i class="fas fa-print"></i>
+                <h1>Farhan Printing Press</h1>
+            </div>
+            <div class="invoice-id" id="invoice-number">INVOICE</div>
+        </div>
+
+        <!-- Business Info -->
+        <div class="business-info">
+            Near SBI Bank, Belauha Bazar, Siddharth Nagar<br>
+            Phone: +91 99356 44687 | +91 98386 44687<br>
+            Email: farhanprintpress@gmail.com
+        </div>
+
+        <!-- Client & Invoice Details -->
+        <div class="details-section">
+            <div class="detail-box">
+                <h3>Bill To</h3>
+                <div class="detail-row">
+                    <div class="detail-label">Name:</div>
+                    <div class="detail-value" id="customer-name"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Phone:</div>
+                    <div class="detail-value" id="customer-phone"></div>
+                </div>
+            </div>
+
+            <div class="detail-box">
+                <h3>Invoice Details</h3>
+                <div class="detail-row">
+                    <div class="detail-label">Invoice No:</div>
+                    <div class="detail-value" id="invoice-no"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Date:</div>
+                    <div class="detail-value" id="invoice-date"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Due Date:</div>
+                    <div class="detail-value" id="due-date"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Items Table -->
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="items-body"></tbody>
+        </table>
+
+        <!-- Totals -->
+        <div class="totals-section">
+            <div class="total-row">
+                <div class="total-label">Subtotal:</div>
+                <div class="total-value" id="subtotal"></div>
+            </div>
+            <div class="total-row">
+                <div class="total-label">Tax (18%):</div>
+                <div class="total-value" id="tax"></div>
+            </div>
+            <div class="total-row grand-total">
+                <div class="total-label">Total Due:</div>
+                <div class="total-value" id="total"></div>
+            </div>
+        </div>
+
+        <!-- Thank You Note -->
+        <div class="thank-you-note">
+            Thank you for your business! Your order will be ready in 3-5 business days.
+        </div>
+
+        <!-- Terms Section -->
+        <div class="terms-section">
+            <h3>Terms & Conditions:</h3>
+            <ol class="terms-list">
+                <li>50% advance payment required for all orders</li>
+                <li>Delivery time may vary based on order complexity</li>
+                <li>Please check all details before approval</li>
+            </ol>
+            <div class="payment-method">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payment Method: Cash/UPI/Bank Transfer</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="invoice-footer">
+            <p>For any queries, please contact us at +91 99356 44687</p>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> Print Invoice
+    </button>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <script>
+        // Format options for display
+        function formatOptions(options) {
+            try {
+                let formatted = '';
+                for (const [key, value] of Object.entries(options)) {
+                    formatted += `${key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}: ${value}; `;
+                }
+                return formatted || 'No options specified';
+            } catch (e) {
+                console.error('Error formatting options:', e);
+                return 'No options specified';
+            }
+        }
+
+        // Generate invoice
+        function generateInvoice() {
+            try {
+                // Retrieve data from localStorage
+                const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                const customer = JSON.parse(localStorage.getItem('customer') || '{}');
+
+                // Elements
+                const customerNameEl = document.getElementById('customer-name');
+                const customerPhoneEl = document.getElementById('customer-phone');
+                const invoiceNoEl = document.getElementById('invoice-no');
+                const invoiceDateEl = document.getElementById('invoice-date');
+                const dueDateEl = document.getElementById('due-date');
+                const itemsBodyEl = document.getElementById('items-body');
+                const subtotalEl = document.getElementById('subtotal');
+                const taxEl = document.getElementById('tax');
+                const totalEl = document.getElementById('total');
+
+                // Check if elements exist
+                if (!customerNameEl || !customerPhoneEl || !invoiceNoEl || !invoiceDateEl || !dueDateEl || !itemsBodyEl || !subtotalEl || !taxEl || !totalEl) {
+                    console.error('Invoice elements not found');
+                    alert('Error generating invoice: Page elements missing');
+                    return;
+                }
+
+                // Populate customer details
+                customerNameEl.textContent = customer.name || 'N/A';
+                customerPhoneEl.textContent = customer.phone || 'N/A';
+
+                // Generate invoice number and dates
+                const now = new Date();
+                const dueDate = new Date(now);
+                dueDate.setDate(now.getDate() + 7);
+                invoiceNoEl.textContent = `FPP-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}-${Math.floor(Math.random() * 1000).toString().padStart(3, '0')}`;
+                invoiceDateEl.textContent = now.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+                dueDateEl.textContent = dueDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+                // Populate items
+                if (!cart || cart.length === 0) {
+                    itemsBodyEl.innerHTML = '<tr><td colspan="5">No items in cart</td></tr>';
+                    subtotalEl.textContent = '₹0.00';
+                    taxEl.textContent = '₹0.00';
+                    totalEl.textContent = '₹0.00';
+                    console.warn('Cart is empty');
+                    return;
+                }
+
+                let subtotal = 0;
+                itemsBodyEl.innerHTML = '';
+                cart.forEach(item => {
+                    try {
+                        const options = JSON.parse(item.options || '{}');
+                        const quantity = options.quantity || 1;
+                        const unitPrice = (item.price || 0) / quantity;
+                        subtotal += item.price || 0;
+                        itemsBodyEl.innerHTML += `
+                            <tr>
+                                <td>${item.service || 'Unknown Service'}</td>
+                                <td>${formatOptions(options)}</td>
+                                <td>${quantity}</td>
+                                <td>₹${unitPrice.toFixed(2)}</td>
+                                <td>₹${(item.price || 0).toFixed(2)}</td>
+                            </tr>
+                        `;
+                    } catch (e) {
+                        console.error('Error processing cart item:', e);
+                    }
+                });
+
+                // Calculate totals
+                const tax = subtotal * 0.18; // 18% tax
+                const total = subtotal + tax;
+                subtotalEl.textContent = `₹${subtotal.toFixed(2)}`;
+                taxEl.textContent = `₹${tax.toFixed(2)}`;
+                totalEl.textContent = `₹${total.toFixed(2)}`;
+
+                // Clear cart and customer data after generating invoice
+                localStorage.removeItem('cart');
+                localStorage.removeItem('customer');
+                console.log('Invoice generated, cart and customer data cleared');
+            } catch (e) {
+                console.error('Error generating invoice:', e);
+                alert('Error generating invoice. Please try again or contact support.');
+            }
+        }
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', generateInvoice);
+    </script>
+</body>
+</html>
